@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Walter Potma",
+        "email": "walterpotma@gmail.com",
+        "password": "@Senha123@",
+        "phone": "11999999999",
+        "cep": "00000000",
+        "house": "000"
+    },
+    {
+        "id": "2",
+        "name": "Gabriel Raatz",
+        "email": "gabrielraatz@gmail.com",
+        "password": "",
+        "phone": "11999999999",
+        "cep": "00000000",
+        "house": "000"
+    },
+    {
+        "id": 3,
+        "name": "Matheus Pupia",
+        "email": "matheuspupia@gmail.com",
+        "password": "",
+        "phone": "11999999999",
+        "cep": "00000000",
+        "house": "000"
+    },
+    {   
+        "id": 4,
+        "name": "Ryan Broday",
+        "email": "ryanbroday@gmail.com",
+        "password": "",
+        "phone": "11999999999",
+        "cep": "00000000",
+        "house": "000"
+    }
+]
