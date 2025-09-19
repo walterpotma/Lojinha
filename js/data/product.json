@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "category": "cpu",
+        "name": "AMD Ryzen 5 5600X",
+        "price": 987.90,
+        "image": "img/product/r5600x.png",
+        "description": "Processador AMD Ryzen 5 5600X, 6 núcleos, 12 threads, até 4.6GHz, Socket AM4, Sem Vídeo Integrado"
+    },
+    {
+        "id": 2,
+        "category": "cpu",
+        "name": "Intel Core i5 12400F",
+        "price": 799.90,
+        "image": "img/product/i512400f.png",
+        "description": "Processador Intel Core i5 12400F, 6 núcleos, 12 threads, até 4.4GHz, Socket 1700, Sem Vídeo Integrado"
+    },
+    {
+        "id": 3,
+        "category": "cpu",
+        "name": "AMD Ryzen 7 5800X",
+        "price": 1499.90,
+        "image": "img/product/r5800x.png",
+        "description": "Processador AMD Ryzen 7 5800X, 8 núcleos, 16 threads, até 4.7GHz, Socket AM4, Sem Vídeo Integrado"
+    },
+    {
+        "id": 4,
+        "category": "cpu",
+        "name": "Intel Core i7 12700F",
+        "price": 1699.90,
+        "image": "img/product/i712700f.png",
+        "description": "Processador Intel Core i7 12700F, 12 núcleos, 20 threads, até 4.9GHz, Socket 1700, Sem Vídeo Integrado"
+    },
+    {
+        "id": 5,
+        "category": "cpu",
+        "name": "AMD Ryzen 9 5900X",
+        "price": 2199.90,
+        "image": "img/product/r5900x.png",
+        "description": "Processador AMD Ryzen 9 5900X, 12 núcleos, 24 threads, até 4.8GHz, Socket AM4, Sem Vídeo Integrado"
+    },
+    {
+        "id": 6,
+        "category": "cpu",
+        "name": "Intel Core i9 12900K",
+        "price": 2999.90,
+        "image": "img/product/i912900k.png",
+        "description": "Processador Intel Core i9 12900K, 16 núcleos, 24 threads, até 5.2GHz, Socket 1700, Sem Vídeo Integrado"
+    }
+]
