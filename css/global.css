@@ -1,0 +1,16 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #2d3250;
+
+}
+
+.container{
+    margin: auto;
+    width: 95%;
+    background-color: #2d3250;
+    border-radius: 10px;
+    
+}

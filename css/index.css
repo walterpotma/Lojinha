@@ -1,0 +1,32 @@
+:root{
+    --fundo-color:#2d3250;
+    --container-color:#2d3250;
+    --card-color:#424769;
+}
+.banner{
+    display: flex;
+    flex-wrap: nowrap;
+    width: auto; 
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: var(--card-color);
+    justify-content: center;
+    color: #f9b17a;
+}
+
+.categories{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.categoria{
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    height: 200px;
+    background-color: var(--card-color);
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
