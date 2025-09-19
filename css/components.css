@@ -1,0 +1,7 @@
+@import url("./global.css");
+
+header {
+    width: 100%;
+    display: flex;
+    background-color: var(--secundaria-color); ;
+}
