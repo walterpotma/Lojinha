@@ -1,0 +1,101 @@
+.prenchimento {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    border: solid 1px #999999;
+    padding: 25px;
+    border-radius: 10px;
+
+}
+
+input {
+    border-radius: 5px;
+    height: 30px;
+    width: auto;
+    border: solid 2px rgb(112, 112, 112);
+
+}
+
+button {
+    border-radius: 5px;
+    height: 38px;
+    width: auto;
+    margin-top: 20px;
+   border: none;
+    background-color: #707070;
+}
+
+button:hover {
+    background-color: #303030;
+  transition: 1s;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-top: px;
+}
+
+.checkbox-container label {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.formulario input[type="text"]:hover {
+    border: solid 2px black;
+}
+
+.aesqueceu{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.aesqueceu a{
+    margin: auto;
+    margin-top: 15px;
+}
+.divider{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+  .divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #606060;
+    
+}
+
+
+  .divider:not(:empty)::before {
+    margin-right: .75em;
+  }
+
+  .divider:not(:empty)::after {
+    margin-left: .75em;
+  }
