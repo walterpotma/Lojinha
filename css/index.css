@@ -1,8 +1,4 @@
-:root{
-    --fundo-color:#2d3250;
-    --container-color:#2d3250;
-    --card-color:#424769;
-}
+@import url("./global.css");
 .banner{
     display: flex;
     flex-wrap: nowrap;
