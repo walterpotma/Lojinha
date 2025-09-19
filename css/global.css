@@ -1,0 +1,28 @@
+
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+}
+:root{
+    --fundo-color: #1E1F2F;       /* fundo principal, mais escuro */
+    --container-color: #2C2F4A;   /* contêineres e seções */
+    --secundaria-color: #3E4162;   /* banners ou destaques */
+    --card-color: #5C63A4;         /* cards de produtos */
+    --text-color: #FFB86C;         /* textos principais */
+    --text-secundaria: #E0E0E0;    /* textos de contraste, links, etc */
+    --hover-color: #7D84C8;        /* efeito hover para botões/cards */
+}
+
+
+body{
+    background-color: var(--fundo-color);
+    margin: 0;
+}
+
+.container{
+    margin: auto;
+    width: 95%;
+    background-color: var(--fundo-color);
+    border-radius: 10px;
+    
+}
