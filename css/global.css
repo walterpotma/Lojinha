@@ -1,28 +1,55 @@
-
-html{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html {
     scroll-behavior: smooth;
-    margin: 0;
-}
-:root{
-    --fundo-color: #1E1F2F;       /* fundo principal, mais escuro */
-    --container-color: #2C2F4A;   /* contêineres e seções */
-    --secundaria-color: #3E4162;   /* banners ou destaques */
-    --card-color: #5C63A4;         /* cards de produtos */
-    --text-color: #FFB86C;         /* textos principais */
-    --text-secundaria: #E0E0E0;    /* textos de contraste, links, etc */
-    --hover-color: #7D84C8;        /* efeito hover para botões/cards */
 }
 
+:root {
+    /* Cores primárias - usadas para elementos principais, botões, destaques */
+    --primary: #2a6df5;
+    --primary-dark: #1e40af;
+    --primary-light: #3b82f6;
 
-body{
-    background-color: var(--fundo-color);
-    margin: 0;
+    /* Cores de destaque (accent) - usadas para preços, ações, elementos secundários */
+    --accent: #10b981;
+    --accent-dark: #0da271;
+    --accent-light: #34d399;
+
+    /* Cores de fundo - usadas para backgrounds principais e secundários */
+    --bg-dark: #0f172a;
+    --bg-medium: #1e293b;
+    --bg-light: #334155;
+
+    /* Cores de texto - usadas para todos os textos */
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    /* Cores de elementos de interface - usadas para cards, inputs, etc */
+    --card-bg: #334155;
+    --card-hover: #3c4a61;
+    --input-bg: #475569;
+
+    /* Cores de status - usadas para feedback, alertas, confirmações */
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
 }
 
-.container{
-    margin: auto;
-    width: 95%;
-    background-color: var(--fundo-color);
-    border-radius: 10px;
-    
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
