@@ -21,32 +21,6 @@
      padding: 0 15px;
  }
 
- 
- .categories-menu {
-     background-color: var(--secondary);
-     padding: 12px 0;
- }
-
- .categories-list {
-     display: flex;
-     list-style: none;
-     justify-content: space-between;
-     flex-wrap: wrap;
- }
-
- .categories-list a {
-     color: var(--text);
-     text-decoration: none;
-     padding: 5px 10px;
-     transition: all 0.3s;
- }
-
- .categories-list a:hover {
-     color: var(--accent);
-     transition: all 0.3s;
-     transform: scale(1.5);
- }
-
  .banner {
      margin: 20px 0;
      border-radius: 8px;
