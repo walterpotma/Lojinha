@@ -1,4 +1,6 @@
 @import url("./global.css");
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
 
 header {
      background-color: var(--dark);
@@ -17,12 +19,45 @@ header {
  }
 
  .logo {
+    font-family: "Readex Pro", sans-serif;
      font-size: 1.8rem;
      font-weight: 700;
-     color: var(--primary);
+     color: var(--text);
      text-decoration: none;
      display: flex;
      align-items: center;
+ }
+
+.logo_total img {
+    opacity: 0;
+    transform: translateX(40.5px) translateY(-35.5px) scale(0);
+    transition: all 0.7s;
+    width: 70px;
+    height: auto;
+    display: block;
+    position: absolute;
+}
+
+.logo_total {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+
+}
+
+.logo_total:hover img {
+    opacity: 1;
+    transition: all 0.7s ;
+    transform: translateX(40.5px) translateY(-40.5px) scale(1);
+    align-items: center;
+    justify-content: center;
+}
+
+ .logo span {
+    font-family: "Readex Pro", sans-serif;
+     color: var(--accent);
  }
 
  .search-bar {
@@ -66,4 +101,35 @@ header {
  .nav-icon i {
      font-size: 1.2rem;
      margin-bottom: 4px;
+ }
+ .categories-menu {
+     background-color: var(--secondary);
+     padding: 12px 0;
+ }
+
+ .categories-list {
+     display: flex;
+     list-style: none;
+     justify-content: space-between;
+     flex-wrap: wrap;
+ }
+
+ .categories-list a {
+     color: var(--text);
+     text-decoration: none;
+     padding: 5px 10px;
+ }
+
+ .categories-list a:hover {
+     color: var(--accent);
+ }
+
+ .categories-list li {
+     transform: scale(1);
+     transition: all 0.3s;
+ }
+
+ .categories-list li:hover {
+     transform: scale(1.2);
+     transition: all 0.3s;
  }
