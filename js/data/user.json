@@ -1,12 +1,15 @@
 [
     {
         "id": 1,
-        "name": "Walter Potma",
+        "first_name": "Walter",
+        "last_name": "Potma",
         "email": "walterpotma@gmail.com",
         "password": "@Senha123@",
         "phone": "11999999999",
         "cep": "00000000",
-        "house": "000"
+        "number_house": "000",
+        "createdAt": "2024-06-10T00:00:00.000Z",
+        "updatedAt": "2024-06-10T00:00:00.000Z"
     },
     {
         "id": "2",
