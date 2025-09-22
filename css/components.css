@@ -72,13 +72,17 @@ header {
      border: none;
      border-radius: 4px;
      background-color: var(--card-bg);
-     color: var(--text);
+     color: var(--text-primary);
+
  }
+ 
+
+
 
  .search-bar button {
      padding: 12px 16px;
      background-color: var(--primary);
-     color: white;
+     color: c;
      border: none;
      border-radius: 4px;
      cursor: pointer;
@@ -100,11 +104,11 @@ header {
 
  .nav-icon i {
      font-size: 1.2rem;
-     margin-bottom: 4px;
+    margin: 0 10px auto;
  }
  .categories-menu {
-     background-color: var(--secondary);
-     padding: 12px 0;
+     background-color: var(--primary-dark);
+     padding: 8px 0;
  }
 
  .categories-list {
@@ -115,18 +119,20 @@ header {
  }
 
  .categories-list a {
-     color: var(--text);
+     color: var(--text-primary);
      text-decoration: none;
-     padding: 5px 10px;
+     
  }
 
  .categories-list a:hover {
      color: var(--accent);
+
  }
 
  .categories-list li {
      transform: scale(1);
      transition: all 0.3s;
+     padding: 5px 10px;
  }
 
  .categories-list li:hover {
