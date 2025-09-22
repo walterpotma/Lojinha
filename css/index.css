@@ -1,18 +1,4 @@
- :root {
-     --primary: #2a6df5;
-     --secondary: #1e40af;
-     --accent: #10b981;
-     --dark: #1e293b;
-     --darker: #0f172a;
-     --light: #f8fafc;
-     --gray: #94a3b8;
-     --card-bg: #334155;
-     --text: #e2e8f0;
-     --text-muted: #94a3b8;
-     --success: #22c55e;
-     --danger: #ef4444;
-     --warning: #f59e0b;
- }
+@import url("../css/global.css");
 
  .container {
      width: 100%;
@@ -30,7 +16,7 @@
  }
 
  .banner-content {
-     background: linear-gradient(to right, var(--primary), var(--secondary));
+     background: linear-gradient(to right, var(--primary), var(--primary-dark));
      height: 100%;
      display: flex;
      align-items: center;
@@ -49,7 +35,7 @@
 
  .banner-btn {
      background-color: var(--accent);
-     color: white;
+     color: var(--text-primary);
      padding: 10px 20px;
      border: none;
      border-radius: 4px;
@@ -59,7 +45,7 @@
  }
 
  .banner-btn:hover {
-     background-color: #0da271;
+     background-color: var(--accent-dark);
  }
 
  .section-title {
