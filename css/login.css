@@ -166,3 +166,29 @@ label {
     font-family: "Readex Pro", sans-serif;
     color: var(--accent);
 }
+h1 {
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+.logo_enviado{
+
+    margin-top: 40px;
+}
+
+.Voltar{
+    padding: 5px 20px;
+    border-radius: 5px;
+    height: 38px;
+    width: auto;
+
+    border: none;
+    background-color: var(--accent-light);
+}
+
+.voltarmeio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
