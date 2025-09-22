@@ -1,3 +1,10 @@
+@import url("../css/global.css");
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+body {
+    background-color: #0F172A;
+}
+
 .prenchimento {
     display: flex;
     flex-direction: column;
@@ -6,27 +13,30 @@
 .formulario {
     display: flex;
     justify-content: center;
-
-
+    align-items: center;
+    height: 100vh;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 300px;
+    width: 400px;
     border: solid 1px #999999;
     padding: 25px;
-    border-radius: 10px;
-
+    border-radius: 13px;
+    background-color: #1e293b;
 }
+
 
 input {
     border-radius: 5px;
     height: 30px;
     width: auto;
-    border: solid 2px rgb(112, 112, 112);
-
+    border: solid 2px var(--primary-light);
+    outline: NONE;
+    padding: 10px;
+    background-color: var(--input-bg);
 }
 
 button {
@@ -34,13 +44,13 @@ button {
     height: 38px;
     width: auto;
     margin-top: 20px;
-   border: none;
-    background-color: #707070;
+    border: none;
+    background-color: var(--accent-light);
 }
 
 button:hover {
-    background-color: #303030;
-  transition: 1s;
+    background-color: var(--accent-dark);
+    transition: 1s;
 }
 
 .checkbox-container input[type="checkbox"] {
@@ -61,41 +71,98 @@ button:hover {
 
 a {
     text-decoration: none;
+    color: var(--primary);
+}
+a:hover {
+    color: var(--primary-dark);
+    transition: 0.5s;
 }
 
 .formulario input[type="text"]:hover {
-    border: solid 2px black;
+    border: solid 2px var(--primary-dark);
 }
 
-.aesqueceu{
+.aesqueceu {
     display: flex;
     flex-direction: column;
 
 
 }
 
-.aesqueceu a{
+.aesqueceu a {
     margin: auto;
     margin-top: 15px;
 }
-.divider{
+
+.divider {
     display: flex;
     align-items: center;
     text-align: center;
-    margin: 20px 0;
+    margin: 10px 0;
 }
-  .divider::before, .divider::after {
+
+.divider::before,
+.divider::after {
     content: "";
     flex: 1;
     border-bottom: 1px solid #606060;
-    
+
 }
 
 
-  .divider:not(:empty)::before {
+.divider:not(:empty)::before {
     margin-right: .75em;
-  }
+}
 
-  .divider:not(:empty)::after {
+.divider:not(:empty)::after {
     margin-left: .75em;
-  }
+}
+
+label {
+    color: var(--text-primary);
+}
+
+.logo {
+    font-family: "Readex Pro", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo_total img {
+    opacity: 0;
+    transform: translateX(40.5px) translateY(-35.5px) scale(0);
+    transition: all 0.7s;
+    width: 70px;
+    height: auto;
+    display: block;
+    position: absolute;
+    
+}
+
+.logo_total {
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+    display: flex;
+    text-align: center;
+}
+
+.logo_total:hover img {     
+    opacity: 1;
+    transition: all 0.7s;
+    transform: translateX(-5px) translateY(-28.5px) scale(1);
+    align-items: center;
+    justify-content: center;
+}
+
+.logo span {
+    font-family: "Readex Pro", sans-serif;
+    color: var(--accent);
+}
