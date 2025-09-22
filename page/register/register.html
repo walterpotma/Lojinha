@@ -12,6 +12,10 @@
 <body>
     <div class="formulario">
         <form action="" class="login">
+            <div class="logo_total">
+                <img class="hover-logo" src="/img/MarketPlus_Logo/logo_5.png" alt="Logo">
+                <p href="#" class="logo">Market<span>Plus</span></p>
+            </div>
             <div class="prenchimento">
                 <label for="Email">E-mail</label>
                 <input id="Email" type="text" required>
@@ -30,19 +34,20 @@
             </div>
             <div class="checkbox-container">
                 <input type="checkbox" name="" id="termos" required>
-                <label for="termos">Ao "Continuar", aceito os <a href="">Termos e condições</a> e autorizo o uso dos meus dados de acordo com a <a href="">Declaração de privacidade</a>.</label>
+                <label for="termos" class="termos1">Ao "Continuar", aceito os <a href="">Termos e condições</a> e autorizo o uso dos
+                    meus dados de acordo com a <a href="">Declaração de privacidade</a>.</label>
             </div>
             <button type="submit">Continuar</button>
-                    <div class="aesqueceu">
-            <span class="divider">ou</span>
-        </div>
-        <script src="https://accounts.google.com/gsi/client" async defer></script>
-        <div id="g_id_onload" data-client_id="SUA_CLIENT_ID_AQUI" data-login_uri="https://seusite.com/handle-login"
-            data-auto_prompt="false">
-        </div>
-        <div class="g_id_signin" data-type="standard"></div>
+            <div class="aesqueceu">
+                <span class="divider">ou</span>
+            </div>
+            <script src="https://accounts.google.com/gsi/client" async defer></script>
+            <div id="g_id_onload" data-client_id="SUA_CLIENT_ID_AQUI" data-login_uri="https://seusite.com/handle-login"
+                data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard"></div>
         </form>
-    
+
     </div>
 </body>
 
