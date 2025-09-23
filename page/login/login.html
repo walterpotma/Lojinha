@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça Login</title>
     <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <script src="../../js/global.js"></script>
+    <script src="../../js/controller.js"></script>
 </head>
 
 <body>
     <div class="formulario">
         <form action="" class="login">
-            <div class="logo_total">
-                <img class="hover-logo" src="/img/MarketPlus_Logo/logo_5.png" alt="Logo">
-                <p href="#" class="logo">Market<span>Plus</span></p>
-            </div>
+            <div id="logo-component"></div>
             <div class="prenchimento">
                 <label for="Email">E-mail</label>
                 <input id="Email" type="text" required>
             </div>
             <div class="prenchimento">
                 <label for="senha">Senha</label>
-                <input id="senha" type="text" required>
+                <input id="senha" type="password" required>
 
                 <button type="submit">Iniciar</button>
         </form>
