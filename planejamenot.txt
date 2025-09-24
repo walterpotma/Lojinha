@@ -45,4 +45,4 @@ Registro- gabriel
 4º Abra o Terminal e execute esses comandos:
 
     git merge main
-    
+===================================

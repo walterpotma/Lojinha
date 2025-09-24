@@ -1,7 +1,6 @@
 @import url("./global.css");
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
 
-
 header {
     background-color: var(--dark);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -15,97 +14,123 @@ header {
     align-items: center;
     padding: 15px 0;
     gap: 20px;
-    max-width: 1170px
+    max-width: 1170px;
+    margin: 0 auto;
 }
 
+/* Logo Component - Reutilizável */
+.logo-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logo-hover-trigger {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    
+}
+
+/* A logo em si */
 .logo {
     font-family: "Readex Pro", sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--text);
+    color: var(--text-primary);
     text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-}
-
-.logo_total {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-}
-
-.logo_total img {
-    opacity: 0;
-    transform: scale(0);
-    transition: all 0.7s ease;
-    width: 70px;
-    height: auto;
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%) translateY(-70%) scale(0);
-}
-
-.logo_total:hover img {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-70%) scale(1);
-    
+    display: inline-block;
+    margin: 0;
+    transition: all 0.3s ease;
 }
 
 .logo span {
-    font-family: "Readex Pro", sans-serif;
     color: var(--accent);
 }
+
+/* Imagem que aparece no hover */
+.logo-hover {
+    opacity: 0;
+    width: 80px;
+    height: auto;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+/* Efeitos de hover */
+.logo-hover-trigger:hover .logo-hover {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.logo-hover-trigger:hover .logo {
+    transform: translateY(2px);
+    color: var(--text-primary);
+}
+
+.logo-hover-trigger:hover {
+    transform: scale(1.05);
+}
+
+.logo-hover-trigger a {
+   color: var(--text-primary);
+}
+
 
 .search-bar {
     display: flex;
     width: 100%;
+    gap: 5px;
 }
 
 .search-bar input {
     flex: 1;
     padding: 12px 15px;
-    margin: 0 5px 0 10px;
     border-radius: 4px;
     background-color: var(--input-bg);
     color: var(--text-primary);
-    border: solid 2px transparent;
+    border: 2px solid transparent;
     outline: none;
-    transition: all 0.3s;
+    transition: border-color 0.3s;
 }
-.search-bar input:hover {
-    border: solid 2px var(--primary);
-    transition: all 0.3s;
+
+.search-bar input:focus {
+    border-color: var(--primary);
 }
 
 .search-bar button {
     background-color: var(--primary);
-    color: c;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    padding: 0 15px;
+    transition: background-color 0.3s;
 }
 
-.search-bar button i{
+.search-bar button:hover,
+.search-bar button:focus {
+    background-color: var(--primary-dark);
+}
+
+.search-bar button i {
     color: var(--text-primary);
-    transform: scale(1);
     padding: 15px;
-    transition: all 0.3s;
-    border: none;
+    transition: transform 0.3s;
 }
 
-.search-bar button i:hover{
-    color: var(--text-primary);
+.search-bar button:hover i {
     transform: scale(1.2);
-    transition: all 0.3s;
-    border: none;
-    
 }
 
 .nav-icons {
@@ -120,14 +145,29 @@ header {
     flex-direction: column;
     align-items: center;
     font-size: 0.9rem;
+    padding: 0.3rem;
+    transition: transform 0.3s;
+}
+
+.nav-icon:hover {
+    transform: scale(1.2);
+
+
+}
+
+.nav-icon:focus {
+    color: var(--accent);
+}
+
+.nav-icon span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav-icon i {
     font-size: 1.2rem;
-    margin: 0 10px auto;
 }
-
-
 
 .categories-menu {
     background-color: var(--primary-dark);
@@ -137,28 +177,24 @@ header {
 .categories-list {
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 .categories-list a {
     color: var(--text-primary);
     text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s;
+    display: block;
 
 }
 
 .categories-list a:hover {
     color: var(--accent);
-
-}
-
-.categories-list li {
-    transform: scale(1);
-    transition: all 0.3s;
+    transform: scale(1.1);
     padding: 5px 10px;
-}
-
-.categories-list li:hover {
-    transform: scale(1.2);
-    transition: all 0.3s;
 }
