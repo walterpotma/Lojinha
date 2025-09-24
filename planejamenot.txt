@@ -17,3 +17,32 @@ Minhas compras
 Login- gabriel
 Registro- gabriel
 
+
+
+===================================
+-MANDAR SUA BRANCH PARA A MAIN-
+ 
+1º Vai na sua branch
+2º Abra o Terminal e execute esses comandos:
+
+    git add .
+
+    git commit -m "descrição"
+
+    git push
+===================================
+
+
+===================================
+-PUXAR DA MAIN PARA A SUA BRANCH-
+
+1º Vai na MAIN
+2º Abra o Terminal e execute esses comandos:
+
+    git pull
+
+3º Vai na sua branch
+4º Abra o Terminal e execute esses comandos:
+
+    git merge main
+===================================

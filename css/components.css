@@ -1,141 +1,200 @@
 @import url("./global.css");
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
 
-
 header {
-     background-color: var(--dark);
-     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-     position: sticky;
-     top: 0;
-     z-index: 1000;
- }
-
- .navbar {
-     display: flex;
-     align-items: center;
-     padding: 15px 0;
-     gap: 20px;
-     max-width: 1170px
- }
-
- .logo {
-    font-family: "Readex Pro", sans-serif;
-     font-size: 1.8rem;
-     font-weight: 700;
-     color: var(--text);
-     text-decoration: none;
-     display: flex;
-     align-items: center;
- }
-
-.logo_total img {
-    opacity: 0;
-    transform: translateX(40.5px) translateY(-35.5px) scale(0);
-    transition: all 0.7s;
-    width: 70px;
-    height: auto;
-    display: block;
-    position: absolute;
+    background-color: var(--dark);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo_total {
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    gap: 20px;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* Logo Component - Reutilizável */
+.logo-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     position: relative;
+}
+
+.logo-hover-trigger {
     display: inline-block;
-    align-items: center;
-    justify-content: center;
-    transform: scale(1);
-
+    position: relative;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    
 }
 
-.logo_total:hover img {
-    opacity: 1;
-    transition: all 0.7s ;
-    transform: translateX(40.5px) translateY(-40.5px) scale(1);
-    align-items: center;
-    justify-content: center;
-}
-
- .logo span {
+/* A logo em si */
+.logo {
     font-family: "Readex Pro", sans-serif;
-     color: var(--accent);
- }
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
+    transition: all 0.3s ease;
+}
 
- .search-bar {
-     display: flex;
-     width: 100%;
- }
+.logo span {
+    color: var(--accent);
+}
 
- .search-bar input {
-     flex: 1;
-     padding: 12px 15px;
-     margin: 0 5px 0 10px ;
-     border: none;
-     border-radius: 4px;
-     background-color: var(--card-bg);
-     color: var(--text-primary);
+/* Imagem que aparece no hover */
+.logo-hover {
+    opacity: 0;
+    width: 80px;
+    height: auto;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+    z-index: 1000;
+    transition: all 0.3s;
+}
 
- }
- 
+/* Efeitos de hover */
+.logo-hover-trigger:hover .logo-hover {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.logo-hover-trigger:hover .logo {
+    transform: translateY(2px);
+    color: var(--text-primary);
+}
+
+.logo-hover-trigger:hover {
+    transform: scale(1.05);
+}
+
+.logo-hover-trigger a {
+   color: var(--text-primary);
+}
 
 
+.search-bar {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
 
- .search-bar button {
-     padding: 12px 16px;
-     background-color: var(--primary);
-     color: c;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
- }
+.search-bar input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 4px;
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: 2px solid transparent;
+    outline: none;
+    transition: border-color 0.3s;
+}
 
- .nav-icons {
-     display: flex;
-     gap: 20px;
- }
+.search-bar input:focus {
+    border-color: var(--primary);
+}
 
- .nav-icon {
-     color: var(--text);
-     text-decoration: none;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     font-size: 0.9rem;
- }
+.search-bar button {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0 15px;
+    transition: background-color 0.3s;
+}
 
- .nav-icon i {
-     font-size: 1.2rem;
-    margin: 0 10px auto;
- }
- .categories-menu {
-     background-color: var(--primary-dark);
-     padding: 8px 0;
- }
+.search-bar button:hover,
+.search-bar button:focus {
+    background-color: var(--primary-dark);
+}
 
- .categories-list {
-     display: flex;
-     list-style: none;
-     justify-content: space-between;
-     flex-wrap: wrap;
- }
+.search-bar button i {
+    color: var(--text-primary);
+    padding: 15px;
+    transition: transform 0.3s;
+}
 
- .categories-list a {
-     color: var(--text-primary);
-     text-decoration: none;
-     
- }
+.search-bar button:hover i {
+    transform: scale(1.2);
+}
 
- .categories-list a:hover {
-     color: var(--accent);
+.nav-icons {
+    display: flex;
+    gap: 20px;
+}
 
- }
+.nav-icon {
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    transition: transform 0.3s;
+}
 
- .categories-list li {
-     transform: scale(1);
-     transition: all 0.3s;
-     padding: 5px 10px;
- }
+.nav-icon:hover {
+    transform: scale(1.2);
 
- .categories-list li:hover {
-     transform: scale(1.2);
-     transition: all 0.3s;
- }
+
+}
+
+.nav-icon:focus {
+    color: var(--accent);
+}
+
+.nav-icon span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-icon i {
+    font-size: 1.2rem;
+}
+
+.categories-menu {
+    background-color: var(--primary-dark);
+    padding: 8px 0;
+}
+
+.categories-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.categories-list a {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s;
+    display: block;
+
+}
+
+.categories-list a:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+    padding: 5px 10px;
+}
