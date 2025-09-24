@@ -1,200 +1,273 @@
 @import url("./global.css");
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
 
 header {
-    background-color: var(--bg-dark);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: var(--bg-medium);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    padding: 15px 0;
-    gap: 20px;
-    max-width: 1170px;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  gap: 20px;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 /* Logo Component - Reutilizável */
 .logo-component {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
 }
 
 .logo-hover-trigger {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
-    
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
 }
 
 /* A logo em si */
 .logo {
-    font-family: "Readex Pro", sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    text-decoration: none;
-    display: inline-block;
-    margin: 0;
-    transition: all 0.3s ease;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+  transition: all 0.3s ease;
 }
 
 .logo span {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 /* Imagem que aparece no hover */
 .logo-hover {
-    opacity: 0;
-    width: 80px;
-    height: auto;
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%) scale(0.8);
-    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    pointer-events: none;
-    z-index: 1000;
-    transition: all 0.3s;
+  opacity: 0;
+  width: 80px;
+  height: auto;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: none;
+  z-index: 1000;
+  transition: all 0.3s;
 }
 
 /* Efeitos de hover */
 .logo-hover-trigger:hover .logo-hover {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
 }
 
 .logo-hover-trigger:hover .logo {
-    transform: translateY(2px);
-    color: var(--text-primary);
+  transform: translateY(2px);
+  color: var(--text-primary);
 }
 
 .logo-hover-trigger:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .logo-hover-trigger a {
-   color: var(--text-primary);
+  color: var(--text-primary);
 }
 
-
 .search-bar {
-    display: flex;
-    width: 100%;
-    gap: 5px;
+  display: flex;
+  width: 100%;
+  gap: 5px;
 }
 
 .search-bar input {
-    flex: 1;
-    padding: 12px 15px;
-    border-radius: 4px;
-    background-color: var(--input-bg);
-    color: var(--text-primary);
-    border: 2px solid transparent;
-    outline: none;
-    transition: border-color 0.3s;
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  border: 2px solid transparent;
+  outline: none;
+  transition: border-color 0.3s;
 }
 
 .search-bar input:focus {
-    border-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .search-bar button {
-    background-color: var(--primary);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 0 15px;
-    transition: background-color 0.3s;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 15px;
+  transition: background-color 0.3s;
 }
 
 .search-bar button:hover,
 .search-bar button:focus {
-    background-color: var(--primary-dark);
+  background-color: var(--primary-dark);
 }
 
 .search-bar button i {
-    color: var(--text-primary);
-    padding: 15px;
-    transition: transform 0.3s;
+  color: var(--text-primary);
+  padding: 15px;
+  transition: transform 0.3s;
 }
 
 .search-bar button:hover i {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .nav-icons {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .nav-icon {
-    color: var(--text-primary);
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.9rem;
-    padding: 0.3rem;
-    transition: transform 0.3s;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  transition: transform 0.3s;
 }
 
 .nav-icon:hover {
-    transform: scale(1.2);
-
-
+  transform: scale(1.2);
 }
 
 .nav-icon:focus {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .nav-icon span {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-icon i {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .categories-menu {
-    background-color: var(--primary-dark);
-    padding: 8px 0;
+  background-color: var(--primary-dark);
+  padding: 8px 0;
 }
 
 .categories-list {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 .categories-list a {
-    color: var(--text-primary);
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: all 0.3s;
-    display: block;
-
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: all 0.3s;
+  display: block;
 }
 
 .categories-list a:hover {
-    color: var(--accent);
-    transform: scale(1.1);
-    padding: 5px 10px;
+  color: var(--accent);
+  transform: scale(1.1);
+  padding: 5px 10px;
+}
+
+footer {
+  background-color: var(--bg-medium);
+  padding: 40px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+  justify-items: center
+}
+
+.footer-column h3 {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.3s;
+  transform: scale(1);
+}
+
+.footer-column a:hover {
+  transform: scale(1.8);
+  transition: all 0.3s;
+}
+
+.footer-column a:focus {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--card-bg);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+  background-color: var(--primary);
 }

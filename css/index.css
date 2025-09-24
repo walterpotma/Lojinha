@@ -62,12 +62,26 @@
 }
 
 
-.section-title {
-    margin: 30px 0 20px;
-    font-size: 1.5rem;
+.section-title h2{
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
     position: relative;
     padding-bottom: 10px;
 }
+
+
+.section-title h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 1.5px;
+    background-color: var(--accent);
+
+}
+
 
 .categories-grid {
     display: grid;
