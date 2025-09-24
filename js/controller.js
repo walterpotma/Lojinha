@@ -32,7 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Load header if placeholder exists
   if (headerPlaceholder) {
-    fetch(paths.header)
+    const headerPath = headerPlaceholder.getAttribute("data-src") || paths.header;
+    fetch(headerPath)
       .then((response) => response.text())
       .then((data) => {
         headerPlaceholder.innerHTML = data;
