@@ -206,16 +206,16 @@ footer {
   margin-bottom: 30px;
   justify-items: center
 }
-
-.footer-column h3 {
+.footer-column-tittle h3 {
   color: var(--text-primary);
   font-size: 1.2rem;
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
+  display: inline-block;
 }
 
-.footer-column h3::after {
+.footer-column-tittle h3::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -223,14 +223,35 @@ footer {
   width: 30px;
   height: 2px;
   background-color: var(--accent);
+  transition: width 0.3s ease;
 }
 
-.footer-column ul {
+.footer-column-tittle h3:hover::after {
+  width: 100%;
+}
+
+.footer-content ul li {
   list-style: none;
 }
 
-.footer-column ul li {
-  margin-bottom: 10px;
+.footer-column li{
+  margin-bottom: 12px;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.footer-column li:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+  
+}
+
+.footer-column li a {
+  margin-bottom: 12px;
+}
+
+.footer-column li a:hover {
+  color: var(--text-primary);
 }
 
 .footer-column a {
@@ -241,7 +262,7 @@ footer {
 }
 
 .footer-column a:hover {
-  transform: scale(1.8);
+  transform: scale(1.1);
   transition: all 0.3s;
 }
 
@@ -250,10 +271,9 @@ footer {
   text-decoration: none;
 }
 
-
+/*emojizin das rede social*/
 .social-links {
   display: flex;
-  gap: 15px;
   margin-top: 15px;
 }
 
@@ -261,11 +281,13 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-right: 4px;
   width: 36px;
   height: 36px;
   background-color: var(--card-bg);
   border-radius: 50%;
   transition: background-color 0.3s;
+
 }
 
 .social-links a:hover {
