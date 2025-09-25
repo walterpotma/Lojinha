@@ -30,6 +30,8 @@ Registro- gabriel
     git commit -m "descrição"
 
     git push
+
+    Depois abre o github no navegador, vai em pull request e manda
 ===================================
 
 
