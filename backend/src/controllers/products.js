@@ -34,7 +34,7 @@ export async function GetIdProducts(req, res) {
 
 export async function CreateProduct(req, res) {
     try {
-        const { Name, Description, Price, Category, Image, Stock } = req.params;
+        const { Name, Description, Price, Category, Image, Stock } = req.body;
 
         const connection = await pool.getConnection();
         const [result] = await connection.execute(CREATE_PRODUCT, [Name, Description, Price, Category, Image, Stock]);
@@ -50,17 +50,17 @@ export async function CreateProduct(req, res) {
 export async function UpdateProduct(req, res) {
     try {
         const { id } = req.params;
+        const { Name, Description, Price, Category, Image, Stock } = req.body;
+
 
         const connection = await pool.getConnection();
-        const [rows] = await connection.execute(UPDATE_PRODUCT, [id]);
-
-        if (rows.length > 0) {
-            res.status(200).json(rows[0]); 
-        } else {
-            res.status(404).json({ mensagem: "Produto não encontrado." });
-        }
+        const [info] = await connection.execute(UPDATE_PRODUCT, [ Name, Description, Price, Category, Image, Stock, id]);
+        const [result] = await connection.execute(GET_BY_ID, [id]);
 
         connection.release();
+
+
+        res.status(201).json({ Product: result, mensagem: "Produto Atualizado com sucesso!" });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -71,14 +71,9 @@ export async function DeleteProduct(req, res) {
         const { id } = req.params;
 
         const connection = await pool.getConnection();
-        const [rows] = await connection.execute(DELETE_PRODUCT, [id]);
+        const [result] = await connection.execute(DELETE_PRODUCT, [id]);
 
-        if (rows.length > 0) {
-            res.status(200).json(rows[0]); 
-        } else {
-            res.status(404).json({ mensagem: "Produto não encontrado." });
-        }
-
+        res.status(200).json({Id: id, mensagem: "Produto deletado com sucesso." }); 
         connection.release();
     } catch (error) {
         res.status(500).json({ error: error.message });
