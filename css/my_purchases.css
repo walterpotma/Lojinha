@@ -1,2 +1,128 @@
 @import url("../css/global.css");
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+.main_market {
+    width: 80%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.product_box {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    gap: 10px;
+}
+
+.price_box {
+    width: 30%;
+    height: 200px;
+}
+
+.name_product {
+    background-color: var(--bg-medium);
+    display: flex;
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    padding: 15px;
+    border-bottom: solid var(--card-bg) 1px;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    height: 100px;
+    background-color: var(--bg-medium);
+    align-items: center;
+    padding: 15px;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.main img{
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+.amount{
+    display: flex;
+    height: 25px;
+}
+.name_main{
+    margin-left: -120px;
+}
+.minus{
+    background-color: var(--card-bg);
+    width: 25px;
+    height: 100%;
+    border: solid white 1px;
+    border-radius: 5px 0px 0px 5px;
+    color: white;
+    cursor: pointer;
+}
+.minus:hover{
+    color: var(--error);
+    transition: 0.2S;
+}
+.plus{
+    width: 25px;
+    height: 100%;
+    border: solid white 1px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: var(--card-bg);
+    color: white;
+    cursor: pointer;
+}
+.plus:hover{
+    color: var(--accent);
+    transition: 0.2s;
+}
+.counter{
+    width: 25px;
+    background-color:var(--card-bg);
+    border-top: solid white 1px;
+    border-bottom: solid white 1px;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+.trash{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.trash:hover{
+    color: var(--accent);
+    transition: 0.2s;
+}
+.product_box{
+    padding-bottom: 80px;
+}
+.price_header{
+    background-color: var(--bg-medium);
+    display: flex;
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    padding: 15px;
+    border-bottom: solid var(--card-bg) 1px;
+}
+.main_price{
+    display: flex;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    height: 150px;
+    background-color: var(--bg-medium);
+    align-items: center;
+    padding: 15px;
+    justify-content: space-between;
+    padding-right: 20px;
+}
