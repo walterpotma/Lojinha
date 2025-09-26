@@ -8,5 +8,5 @@ app.use(express.json());
 app.use('/api/v1', Routers);
 
 app.listen(port, () => {
-    console.log(`Servidor backend rodando em http://localhost:${port}`);
+    console.log(`Servidor backend rodando em http://host:${port}`);
 });
