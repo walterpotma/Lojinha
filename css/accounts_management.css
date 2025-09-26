@@ -179,3 +179,14 @@ button:hover {
 .logo_enviado {
   margin-top: 40px;
 }
+
+.terms-and-privacy-label{
+margin: 0
+}
+
+
+.terms-and-privacy-label a{
+  text-decoration: none;
+  color: var(--text-primary);
+
+}

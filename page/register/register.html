@@ -6,39 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../img/MarketPlus_Logo/logo_5.png" type="image/x-icon">
     <title>Crie sua conta</title>
-    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/accounts_management.css">
 
 </head>
 
 <body>
-    <div class="formulario">
+    <div class="form-container">
         <form action="" class="login">
             <div id="logo-component"></div>
-            <div class="prenchimento">
+             <div class="form-field">
+                <label for="Name">Nome</label>
+                <input id="Name" type="text" required>
+            </div>
+            <div class="form-field">
                 <label for="Email">E-mail</label>
-                <input id="Email" type="text" required>
+                <input id="Email" type="email" required>
             </div>
-            <div class="prenchimento">
-                <label for="telefone">Telefone</label>
-                <input id="telefone" type="text" required>
+            <div class="form-field">
+                <label for="Phone">Telefone</label>
+                <input id="Phone" type="tel" required>
             </div>
-            <div class="prenchimento">
-                <label for="nome">Nome</label>
-                <input id="nome" type="text" required>
-            </div>
-            <div class="prenchimento">
-                <label for="senha">Senha</label>
-                <input id="senha" type="text" required>
+           
+            <div class="form-field">
+                <label for="password">Senha</label>
+                <input id="password" type="password" required>
             </div>
             <div class="checkbox-container">
-                <input type="checkbox" name="" id="termos" required>
-                <label for="termos" class="termos1">Ao "Continuar", aceito os <a href="">Termos e condições</a> e autorizo o uso dos
+                <input type="checkbox" name="" id="checkbox" required>
+                <label for="terms" class="terms-and-privacy-label">Ao "Continuar", aceito os <a href="">Termos e condições</a> e autorizo o uso dos
                     meus dados de acordo com a <a href="">Declaração de privacidade</a>.</label>
             </div>
             <button type="submit">Continuar</button>
-            <div class="aesqueceu">
-                <span class="divider">ou</span>
-            </div>
+           <div class="forgot-password">    
+            <span class="divider">ou</span>
+        </div>
             <script src="https://accounts.google.com/gsi/client" async defer></script>
             <div id="g_id_onload" data-client_id="SUA_CLIENT_ID_AQUI" data-login_uri="https://seusite.com/handle-login"
                 data-auto_prompt="false">
