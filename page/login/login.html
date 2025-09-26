@@ -12,21 +12,21 @@
 </head>
 
 <body>
-    <div class="formulario">
+    <div class="form-container">
         <form action="" class="login">
             <div id="logo-component"></div>
-            <div class="prenchimento">
+            <div class="form-field">
                 <label for="Email">E-mail</label>
-                <input id="Email" type="text" required>
+                <input id="Email" type="email" required>
             </div>
-            <div class="prenchimento">
-                <label for="senha">Senha</label>
-                <input id="senha" type="password" required>
+            <div class="form-field">
+                <label for="password">Senha</label>
+                <input id="password" type="password" required>
 
                 <button type="submit">Iniciar</button>
         </form>
-        <div class="aesqueceu">
-            <a class="linkesquece" href="../senha/recuperar.html">Esqueceu a senha?</a>
+        <div class="forgot-password">
+            <a class="password-recovery-link" href="../password/recovered.html">Esqueceu a senha?</a>
             <span class="divider">ou</span>
         </div>
 
@@ -35,7 +35,7 @@
             data-auto_prompt="false">
         </div>
         <div class="g_id_signin" data-type="standard"></div>
-        <div class="creat_account"><a class="linkcreat" href="../register/register.html">Não tenho conta</a></div>
+        <div class="create-account"><a class="register-link" href="../register/register.html">Não tenho conta</a></div>
     </div>
     <script src="../../js/global.js"></script>
     <script src="../../js/controller.js"></script>
