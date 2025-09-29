@@ -206,7 +206,7 @@ footer {
   margin-bottom: 30px;
   justify-items: center
 }
-.footer-column-tittle h3 {
+.footer-column-title h3 {
   color: var(--text-primary);
   font-size: 1.2rem;
   margin-bottom: 20px;
@@ -215,7 +215,7 @@ footer {
   display: inline-block;
 }
 
-.footer-column-tittle h3::after {
+.footer-column-title h3::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -226,7 +226,7 @@ footer {
   transition: width 0.3s ease;
 }
 
-.footer-column-tittle h3:hover::after {
+.footer-column-title h3:hover::after {
   width: 100%;
 }
 
