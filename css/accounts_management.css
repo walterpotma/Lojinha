@@ -64,8 +64,9 @@ form {
 }
 
 /* === Buttons & Links === */
-button {
-  border-radius: 5px;
+
+.form-field button{
+    border-radius: 5px;
   height: 42px;
   width: auto;
   margin-top: 20px;
@@ -79,10 +80,12 @@ button {
   font-weight: 600;
 }
 
-button:hover {
+
+.form-field button:hover {
   background-color: var(--accent-dark);
   transition: all 0.3s;
 }
+
 
 .create-account {
   flex-direction: column;
@@ -190,3 +193,55 @@ margin: 0
   color: var(--text-primary);
 
 }
+
+.send-email-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin:auto;
+  margin-top: 50px;
+}
+
+.send-email-text h1{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  color: var(--text-primary);
+  font-size: 1.7rem;
+
+}
+
+.forward-button{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+
+.button-forward{
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  height: 42px;
+  width: 100px;
+  margin-top: 20px;
+  border: none;
+  background-color: var(--accent-light);
+  color: var(--bg-dark);
+  transition: all 0.3s;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+}
+
+.button-forward:hover {
+  background-color: var(--accent-dark);
+  transition: all 0.3s;
+}
+

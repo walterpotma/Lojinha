@@ -1,24 +1,3 @@
-Inicio
-Produtos Catalogo
-Produto unitario
-
-Contato/Suporte
-
-Carrinho
-Finalizar Compra
-
-
-Perfil
-Minhas compras
-
-
-
-
-Login- gabriel
-Registro- gabriel
-
-
-
 ===================================
 -MANDAR SUA BRANCH PARA A MAIN-
  
@@ -32,10 +11,9 @@ Registro- gabriel
     git push
 
     Depois abre o github no navegador, vai em pull request e manda
-===================================
-
 
 ===================================
+
 -PUXAR DA MAIN PARA A SUA BRANCH-
 
 1º Vai na MAIN
@@ -47,4 +25,11 @@ Registro- gabriel
 4º Abra o Terminal e execute esses comandos:
 
     git merge main
+    
 ===================================
+
+matheus fazer (não esquecer)
+
+botão register.html
+
+colocar links no footer logado e n logado
