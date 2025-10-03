@@ -16,5 +16,6 @@ router.post('/user', accountController.CreateUser);
 router.put('/user/:id', accountController.UpdateUser);
 router.delete('/user/:id', accountController.DeleteUser);
 router.post('/user/login', accountController.Login);
+router.post('/user/validtoken', accountController.ValidateToken);
 
 export default router;
