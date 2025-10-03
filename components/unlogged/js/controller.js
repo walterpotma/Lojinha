@@ -9,8 +9,8 @@
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const headerPlaceholder = document.getElementById("header-component");
-  const footerPlaceholder = document.getElementById("footer-component");
+  const headerPlaceholder = document.getElementById("unlogged-header-component");
+  const footerPlaceholder = document.getElementById("unlogged-footer-component");
   const logoPlaceholders = Array.from(document.querySelectorAll("#logo-component"));
 
   function loadCSS(href) {
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Normalize to root-absolute paths for consistency across pages
   const paths = {
-    header: "/components/unlogged/header.html",
-    footer: "/components/unlogged/footer.html",
+    header: "/components/unlogged/html/header.html",
+    footer: "/components/unlogged/html/footer.html",
     logo: "/components/logo.html",
     componentsCss: "/css/components.css",
   };
