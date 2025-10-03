@@ -12,7 +12,6 @@
 
 .photo {
     width: 40%;
-
 }
 
 .info {
@@ -39,7 +38,6 @@
     margin: auto;
     display: flex;
     gap: 5px;
-
 }
 
 .stats {
@@ -47,7 +45,6 @@
     margin: auto;
     color: var(--primary-light);
     padding-bottom: 15px;
-
 }
 
 .p1 {
@@ -62,7 +59,6 @@
     display: flex;
     gap: 10px;
     flex-direction: column;
-
 }
 
 .money {
@@ -164,24 +160,46 @@
     color: white;
     transition: 0.5s;
 }
-.plus_title{
+
+.plus_title {
     padding-top: 40px;
     width: 100%;
     text-align: center;
     padding-bottom: 50px;
 }
-.infus{
+
+.infus {
     display: flex;
     width: 90%;
     margin: auto;
-    gap: 300px;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-bottom: solid 1px var(--text-muted) ;
+    border-bottom: solid 1px var(--text-muted);
 }
-.infus_title{
+
+.infus_title {
     font-weight: bold;
 }
-.plus_info{
+
+.plus_info {
     margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+        width: 95%;
+    }
+    .photo,
+
+    
+    .info {
+        width: 100%;
+
+    }
+
+    .infus {
+        flex-direction: column;
+        gap: 5px;
+    }
 }

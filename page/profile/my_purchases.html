@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header id="header-component"></header>
+    <header id="logged-header-component"></header>
     <div class="market_box">
         <div class="main_market">
             <div class="product_box">
@@ -23,8 +23,34 @@
                         <p>Produto da loja Exemploexemplo</p>
                     </div>
                     <div class="main">
-                        <a href=""><img src="../../img/batata.png" alt="Img produto"></a>
-                        <a class="name_main" href=""><p>Nome exemplo produto</p></a>
+                        <div class="gap"> <a href=""><img src="../../img/batata.png" alt="Img produto"></a>
+                            <a class="name_main" href="">
+                                <p>Nome exemplo produto</p>
+                            </a>
+                        </div>
+                        <div class="amount">
+                            <button class="minus" aria-label="Diminuir quantidade"><i
+                                    class="bi bi-dash-lg"></i></button>
+                            <p class="counter">1</p> <button class="plus" aria-label="Aumentar quantidade"><i
+                                    class="bi bi-plus-lg"></i></button>
+
+                        </div>
+                        <p class="price">R$ 00,00</p>
+                        <button class="trash" aria-label="Remover item do carrinho">
+                            <i class="bi bi-trash3"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="name_product">
+                        <p>Produto da loja Exemploexemplo</p>
+                    </div>
+                    <div class="main">
+                        <div class="gap"> <a href=""><img src="../../img/batata.png" alt="Img produto"></a>
+                            <a class="name_main" href="">
+                                <p>Nome exemplo produto</p>
+                            </a>
+                        </div>
                         <div class="amount">
                             <button class="minus"><i class="bi bi-dash-lg"></i></button>
                             <p class="counter">1</p> <button class="plus"><i class="bi bi-plus-lg"></i></button>
@@ -39,8 +65,11 @@
                         <p>Produto da loja Exemploexemplo</p>
                     </div>
                     <div class="main">
-                        <a href=""><img src="../../img/batata.png" alt="Img produto"></a>
-                        <a class="name_main" href=""><p>Nome exemplo produto</p></a>
+                        <div class="gap"> <a href=""><img src="../../img/batata.png" alt="Img produto"></a>
+                            <a class="name_main" href="">
+                                <p>Nome exemplo produto</p>
+                            </a>
+                        </div>
                         <div class="amount">
                             <button class="minus"><i class="bi bi-dash-lg"></i></button>
                             <p class="counter">1</p> <button class="plus"><i class="bi bi-plus-lg"></i></button>
@@ -55,24 +84,11 @@
                         <p>Produto da loja Exemploexemplo</p>
                     </div>
                     <div class="main">
-                        <a href=""><img src="../../img/batata.png" alt="Img produto"></a>
-                        <a class="name_main" href=""><p>Nome exemplo produto</p></a>
-                        <div class="amount">
-                            <button class="minus"><i class="bi bi-dash-lg"></i></button>
-                            <p class="counter">1</p> <button class="plus"><i class="bi bi-plus-lg"></i></button>
-
+                        <div class="gap"> <a href=""><img src="../../img/batata.png" alt="Img produto"></a>
+                            <a class="name_main" href="">
+                                <p>Nome exemplo produto</p>
+                            </a>
                         </div>
-                        <p class="price">R$ 00,00</p>
-                        <button class="trash"><i class="bi bi-trash3"></i></button>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="name_product">
-                        <p>Produto da loja Exemploexemplo</p>
-                    </div>
-                    <div class="main">
-                        <a href=""><img src="../../img/batata.png" alt="Img produto"></a>
-                        <a class="name_main" href=""><p>Nome exemplo produto</p></a>
                         <div class="amount">
                             <button class="minus"><i class="bi bi-dash-lg"></i></button>
                             <p class="counter">1</p> <button class="plus"><i class="bi bi-plus-lg"></i></button>
@@ -111,18 +127,18 @@
                             <p>R$ 00,00</p>
                         </div>
                     </div>
-                    <div class="continue_shopping"><a class="link_continue" href="">Finalizar compra</a></div>
+                    <a href="confirm_payment.html" class="button-primary">Finalizar compra</a>
                 </div>
 
 
             </div>
         </div>
         <footer>
-            <div id="footer-component"></div>
+            <div id="logged-footer-component"></div>
         </footer>
 
         <script src="../../js/global.js"></script>
-        <script src="../../js/controller.js"></script>
+        <script src="../../components/logged/js/controller.js"></script>
 </body>
 
 </html
