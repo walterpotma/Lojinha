@@ -1,0 +1,69 @@
+@import url("../css/global.css");
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+.central {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    height: 50px;
+}
+
+.methods {
+    width: 60%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.invoice {
+    width: 40%;
+    background-color: rgb(0, 0, 0);
+    height: 50px;
+
+}
+
+.pix {
+    width: 90%;
+    background-color: var(--bg-light);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+.new_card {
+    width: 90%;
+    background-color: var(--bg-light);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+.card {
+    width: 90%;
+    background-color: var(--bg-light);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+.methods img {
+    width: 35px;
+    padding: 5px;
+    background-color: #050128;
+    border-radius: 100%;
+    align-items: center;
+}
+.texth1{
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.texth2{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
