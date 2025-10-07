@@ -1,163 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MarketPlus</title>
-    <link rel="icon" href="./img/MarketPlus_Logo/icon.png" type="image/png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
 
-  <body>
-    <header id="header-component"></header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarketPlus</title>
+  <link rel="icon" href="./img/MarketPlus_Logo/icon.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
 
-    <main class="container">
-      <section class="banner">
-        <div class="banner-content">
-          <div class="banner-text">
-            <h2>Ofertas Especiais</h2>
-            <p>produro ruim e caro</p>
-            <button class="banner-btn">Ver Ofertas</button>
-          </div>
-          <div class="banner-img">
-            <img src="./img/batata.png" alt="Produto em Oferta" />
-          </div>
+<body>
+  <header id="header-component"></header>
+
+  <main class="container">
+    <section class="banner">
+      <div class="banner-content">
+        <div class="banner-text">
+          <h2>Ofertas Especiais</h2>
+          <p>produro ruim e caro</p>
+          <button class="banner-btn">Ver Ofertas</button>
         </div>
-      </section>
-      <section class="category-section">
-        <div class="section-title">
-          <h3>Categorias</h3>
+        <div class="banner-img">
+          <img src="./img/batata.png" alt="Produto em Oferta" />
         </div>
-        <div class="category-grid">
+      </div>
+    </section>
+    <section class="category-section">
+      <div class="section-title">
+        <h3>Categorias</h3>
+      </div>
+      <div class="category-grid">
+        <button class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h3>Processador</h3>
+        </button>
+        <button class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h3>Placa de video</h3>
+        </button>
+        <button class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h3>Placa Mãe</h3>
+        </button>
+        <button class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h3>Fonte</h3>
+        </button>
+        <button class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h3>Memoria Ran</h3>
+        </button>
+        <button id="btn-outros" class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h3>Outros</h3>
+        </button>
+        <div class="mais-categorias" id="mais-categorias">
           <button class="category-card">
             <div class="category-icon">
               <i class="fa-solid fa-ellipsis"></i>
             </div>
-            <h3>Processador</h3>
+            <h3>Gabinete</h3>
           </button>
           <button class="category-card">
             <div class="category-icon">
               <i class="fa-solid fa-ellipsis"></i>
             </div>
-            <h3>Placa de video</h3>
+            <h3>SSD</h3>
           </button>
           <button class="category-card">
             <div class="category-icon">
               <i class="fa-solid fa-ellipsis"></i>
             </div>
-            <h3>Placa Mãe</h3>
+            <h3>Cooler</h3>
           </button>
           <button class="category-card">
             <div class="category-icon">
               <i class="fa-solid fa-ellipsis"></i>
             </div>
-            <h3>Fonte</h3>
+            <h3>Mouse</h3>
           </button>
           <button class="category-card">
             <div class="category-icon">
               <i class="fa-solid fa-ellipsis"></i>
             </div>
-            <h3>Memoria Ran</h3>
+            <h3>Teclado</h3>
           </button>
           <button class="category-card">
             <div class="category-icon">
               <i class="fa-solid fa-ellipsis"></i>
             </div>
-            <h3>Outros</h3>
+            <h3>Microfene</h3>
           </button>
         </div>
-      </section>
+      </div>
 
-      <section class="product-section">
-        <div class="section-title">
-          <h3>Produtos Top</h3>
-        </div>
-        <div id="product-grid" class="product-grid">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="./img/batata.png"
-                alt="Nome do Produto"
-                class="product-image"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Nome do Produto 1</h3>
-              <p class="product-price">R$ 00,00</p>
-              <button class="product-buy-btn">Ver Mais</button>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="./img/batata.png"
-                alt="Nome do Produto"
-                class="product-image"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Nome do Produto 2</h3>
-              <p class="product-price">R$ 00,00</p>
-
-              <button class="product-buy-btn">Ver Mais</button>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="./img/batata.png"
-                alt="Nome do Produto"
-                class="product-image"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Nome do Produto 3</h3>
-              <p class="product-price">R$ 00,00</p>
-              <button class="product-buy-btn">Ver Mais</button>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="./img/batata.png"
-                alt="Nome do Produto"
-                class="product-image"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Nome do Produto 4</h3>
-              <p class="product-price">R$ 00,00</p>
-              <button class="product-buy-btn">Ver Mais</button>
-            </div>
-          </div>
+    </section>
 
 
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="./img/batata.png"
-                alt="Nome do Produto"
-                class="product-image"
-              />
+    <section class="product-section">
+      <div class="section-title">
+        <h3>Nome da Categoria selecionada</h3>
+
+        <div class="filter-container">
+          <button id="open-filters-btn" class="open-filters-btn">
+            Filtros
+            <i class="fa-solid fa-filter"></i>
+          </button>
+
+          <div class="filter-popover" id="filter-popover">
+            <div class="filter-group">
+              <h4>Filtrar por Preço</h4>
+              <div class="price-inputs">
+                <input type="number" id="price-min" placeholder="Mínimo" class="price-input" min="0" value="0">
+                <input type="number" id="price-max" placeholder="Máximo" class="price-input" min="0">
+              </div>
             </div>
-            <div class="product-info">
-              <h3 class="product-name">Nome do Produto 5</h3>
-              <p class="product-price">R$ 00,00</p>
-              <button class="product-buy-btn">Ver Mais</button>
+
+            <div class="filter-group">
+              <h4>Ordenar por</h4>
+              <select id="sort-options" class="sort-select">
+                <option value="relevance">Relevância</option>
+                <option value="price-desc">Maior Valor</option>
+                <option value="price-asc">Menor Valor</option>
+              </select>
+            </div>
+
+            <div class="popover-actions">
+              <button id="clear-filters-btn" class="clear-btn">Limpar</button>
+              <button id="apply-filters-btn" class="apply-btn">Aplicar</button>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
 
-    <footer>
-      <div id="footer-component"></div>
-    </footer>
-    <script src="./js/global.js"></script>
-    <script src="js/controller.js"></script>
-  </body>
+      <div id="product-grid" class="product-grid">
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="./img/batata.png" alt="Nome do Produto" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nome do Produto 1</h3>
+            <p class="product-price">R$ 00,00</p>
+            <button class="product-buy-btn">Ver Mais</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="./img/batata.png" alt="Nome do Produto" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nome do Produto 2</h3>
+            <p class="product-price">R$ 00,00</p>
+
+            <button class="product-buy-btn">Ver Mais</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="./img/batata.png" alt="Nome do Produto" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nome do Produto 3</h3>
+            <p class="product-price">R$ 00,00</p>
+            <button class="product-buy-btn">Ver Mais</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="./img/batata.png" alt="Nome do Produto" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nome do Produto 4</h3>
+            <p class="product-price">R$ 00,00</p>
+            <button class="product-buy-btn">Ver Mais</button>
+          </div>
+        </div>
+
+
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="./img/batata.png" alt="Nome do Produto" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nome do Produto 5</h3>
+            <p class="product-price">R$ 00,00</p>
+            <button class="product-buy-btn">Ver Mais</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-component"></div>
+  </footer>
+  <script src="./js/index.js"></script>
+  <script src="./js/global.js"></script>
+  <script src="js/controller.js"></script>
+</body>
+
 </html>
