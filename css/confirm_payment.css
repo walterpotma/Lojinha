@@ -1,0 +1,97 @@
+@import url("../css/global.css");
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+
+.methods img {
+    width: 35px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 100%;
+    align-items: center;
+}
+
+.texth1 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.texth2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.play {
+    width: 150px;
+    padding: 8px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.camps {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: solid 1px var(--text-secondary);
+    padding-bottom: 10px;
+}
+.summary{
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.payment-option {
+    width: 90%;
+    background-color: var(--bg-light);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+.central {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+
+}
+
+.methods {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.invoice {
+    width: 350px;
+    height: fit-content;
+    margin-top: 40px;
+    border-radius: 5px;
+    background-color: var(--bg-light);
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .central {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .invoice {
+        width: 100%;
+        margin-top: 20px;
+    }
+}

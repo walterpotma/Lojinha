@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirme pagamento</title>
+    <link rel="icon" href="/img/MarketPlus_Logo/icon.png" type="image/png">
+    <link rel="stylesheet" href="../../css/confirm_payment.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div id="logo-component"></div>
+            </div>
+        </div>
+    </header>
+    <div>
+        <div class="central">
+            <div class="methods">
+                <h2 class="texth1">Escolha metodo de pagamento</h2>
+<label for="pix_option" class="payment-option">
+    <input class="check" type="radio" name="metodo_pagamento" id="pix_option" checked>
+    <img src="../../img/MarketPlus_Logo/logo_pix.png" alt="Logo Pix">
+    <p>Pix</p>
+</label>
+
+<label for="card_option" class="payment-option">
+    <input class="check" type="radio" name="metodo_pagamento" id="card_option">
+    <img src="../../img/MarketPlus_Logo/image.png" alt="Ícone de Cartão">
+    <p>Cartão cadastrado</p>
+</label>
+<h3 class="texth2" >Adcione um novo cartão</h3>
+<label for="new_card_option" class="payment-option">
+    <input class="check" type="radio" name="metodo_pagamento" id="new_card_option">
+    <img src="../../img/MarketPlus_Logo/image.png" alt="Ícone de Cartão">
+    <p>Novo cartão</p>
+</label>
+
+                <button class="play">Continue</button>
+            </div>
+            <div class="invoice">
+                <p class="summary">Resumo compra</p>
+                <div class="camps">
+                    <div>
+                        <p>Produto</p>
+                        <p>Frete</p>
+                    </div>
+                    <div>
+                        <p>R$00,00</p>
+                        <p>R$00,00</p>
+                    </div>
+                </div>
+                <div class="camps">
+                    <div>
+                        <p>Total</p>
+                    </div>
+                    <div class="summary">
+                        <p>R$00,00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../js/global.js"></script>
+    <script src="../../components/logged/js/controller.js"></script>
+
+</body>
+
+
+</html>

@@ -7,6 +7,7 @@ const paths = {
     footerLogged: "/components/logged/html/footer.html",
     logo: "/components/logo.html",
     componentsCss: "/css/components.css",
+    
 };
 
 document.addEventListener("DOMContentLoaded", initializePage);
