@@ -1,163 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MarketPlus</title>
-    <link rel="icon" href="./img/MarketPlus_Logo/icon.png" type="image/png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
 
-  <body>
-    <header id="unlogged-header-component"></header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarketPlus</title>
+  <link rel="icon" href="./img/MarketPlus_Logo/icon.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
 
-    <main class="container">
-      <section class="banner">
-        <div class="banner-content">
-          <div class="banner-text">
-            <h2>Ofertas Especiais</h2>
-            <p>produro ruim e caro</p>
-            <button class="banner-btn">Ver Ofertas</button>
+<body>
+  <header id="unlogged-header-component"></header>
+
+  <main class="container">
+    <section class="banner">
+      <div class="banner-content">
+        <div class="banner-text">
+          <h2>Ofertas Especiais</h2>
+          <p>produro ruim e caro</p>
+          <button class="banner-btn">Ver Ofertas</button>
+        </div>
+        <div class="banner-img">
+          <img src="./img/batata.png" alt="Produto em Oferta" />
+        </div>
+      </div>
+    </section>
+    <section class="category-section">
+      <div class="section-title">
+        <h3>Categorias</h3>
+      </div>
+      <div class="category-grid">
+        <button class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
           </div>
-          <div class="banner-img">
-            <img src="./img/batata.png" alt="Produto em Oferta" />
+          <h3>Processador</h3>
+        </button>
+        <button class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h3>Placa de video</h3>
+        </button>
+        <button class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h3>Placa Mãe</h3>
+        </button>
+        <button class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h3>Fonte</h3>
+        </button>
+        <button class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h3>Memoria Ran</h3>
+        </button>
+        <button id="btn-outros" class="category-card">
+          <div class="category-icon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h3>Outros</h3>
+        </button>
+        <div class="mais-categorias" id="mais-categorias">
+          <button class="category-card">
+            <div class="category-icon">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <h3>Gabinete</h3>
+          </button>
+          <button class="category-card">
+            <div class="category-icon">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <h3>SSD</h3>
+          </button>
+          <button class="category-card">
+            <div class="category-icon">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <h3>Cooler</h3>
+          </button>
+          <button class="category-card">
+            <div class="category-icon">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <h3>Mouse</h3>
+          </button>
+          <button class="category-card">
+            <div class="category-icon">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <h3>Teclado</h3>
+          </button>
+                    <button class="category-card">
+            <div class="category-icon">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <h3>Batatas</h3>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="product-section">
+      <div class="section-title">
+        <h3>Produtos Top</h3>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="./img/batata.png" alt="Nome do Produto" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nome do Produto 1</h3>
+            <p class="product-price">R$ 00,00</p>
+            <button class="product-buy-btn">Ver Mais</button>
           </div>
         </div>
-      </section>
-      <section class="category-section">
-        <div class="section-title">
-          <h3>Categorias</h3>
-        </div>
-        <div class="category-grid">
-          <button class="category-card">
-            <div class="category-icon">
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <h3>Processador</h3>
-          </button>
-          <button class="category-card">
-            <div class="category-icon">
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <h3>Placa de video</h3>
-          </button>
-          <button class="category-card">
-            <div class="category-icon">
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <h3>Placa Mãe</h3>
-          </button>
-          <button class="category-card">
-            <div class="category-icon">
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <h3>Fonte</h3>
-          </button>
-          <button class="category-card">
-            <div class="category-icon">
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <h3>Memoria Ran</h3>
-          </button>
-          <button class="category-card">
-            <div class="category-icon">
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <h3>Outros</h3>
-          </button>
-        </div>
-      </section>
-
-      <section class="product-section">
-        <div class="section-title">
-          <h3>Produtos Top</h3>
-        </div>
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="./img/batata.png"
-                alt="Nome do Produto"
-                class="product-image"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Nome do Produto 1</h3>
-              <p class="product-price">R$ 00,00</p>
-              <button class="product-buy-btn">Ver Mais</button>
-            </div>
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="./img/batata.png" alt="Nome do Produto" class="product-image" />
           </div>
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="./img/batata.png"
-                alt="Nome do Produto"
-                class="product-image"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Nome do Produto 2</h3>
-              <p class="product-price">R$ 00,00</p>
+          <div class="product-info">
+            <h3 class="product-name">Nome do Produto 2</h3>
+            <p class="product-price">R$ 00,00</p>
 
-              <button class="product-buy-btn">Ver Mais</button>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="./img/batata.png"
-                alt="Nome do Produto"
-                class="product-image"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Nome do Produto 3</h3>
-              <p class="product-price">R$ 00,00</p>
-              <button class="product-buy-btn">Ver Mais</button>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="./img/batata.png"
-                alt="Nome do Produto"
-                class="product-image"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Nome do Produto 4</h3>
-              <p class="product-price">R$ 00,00</p>
-              <button class="product-buy-btn">Ver Mais</button>
-            </div>
-          </div>
-
-
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="./img/batata.png"
-                alt="Nome do Produto"
-                class="product-image"
-              />
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Nome do Produto 5</h3>
-              <p class="product-price">R$ 00,00</p>
-              <button class="product-buy-btn">Ver Mais</button>
-            </div>
+            <button class="product-buy-btn">Ver Mais</button>
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer>
-      <div id="unlogged-footer-component"></div>
-    </footer>
-    <script src="./js/global.js"></script>
-    <script src="./components/unlogged/js/controller.js"></script>
-  </body>
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="./img/batata.png" alt="Nome do Produto" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nome do Produto 3</h3>
+            <p class="product-price">R$ 00,00</p>
+            <button class="product-buy-btn">Ver Mais</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="./img/batata.png" alt="Nome do Produto" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nome do Produto 4</h3>
+            <p class="product-price">R$ 00,00</p>
+            <button class="product-buy-btn">Ver Mais</button>
+          </div>
+        </div>
+
+
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="./img/batata.png" alt="Nome do Produto" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nome do Produto 5</h3>
+            <p class="product-price">R$ 00,00</p>
+            <button class="product-buy-btn">Ver Mais</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="unlogged-footer-component"></div>
+  </footer>
+  <script src="./js/index.js"></script>
+  <script src="./js/global.js"></script>
+  <script src="./components/unlogged/js/controller.js"></script>
+</body>
+
 </html>
