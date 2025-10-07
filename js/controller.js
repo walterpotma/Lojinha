@@ -1,86 +1,126 @@
-{
-  /* 
-      <div id="header-component"></div>
-  
-      <div id="footer-component"></div>
-  
-      <div id="logo-component"></div>
-  */
-}
+'use strict';
 
-document.addEventListener("DOMContentLoaded", function () {
-  const headerPlaceholder = document.getElementById("header-component");
-  const footerPlaceholder = document.getElementById("footer-component");
-  const logoPlaceholders = Array.from(document.querySelectorAll("#logo-component"));
-
-  function loadCSS(href) {
-    if (!document.querySelector(`link[href="${href}"]`)) {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = href;
-      document.head.appendChild(link);
-    }
-  }
-
-  // Normalize to root-absolute paths for consistency across pages
-  const paths = {
-    header: "/components/unlogged/header.html",
-    footer: "/components/unlogged/footer.html",
+const paths = {
+    header: "/components/unlogged/html/header.html",
+    loggedHeader: "/components/logged/html/header.html",
+    footer: "/components/unlogged/html/footer.html",
+    footerLogged: "/components/logged/html/footer.html",
     logo: "/components/logo.html",
     componentsCss: "/css/components.css",
-  };
+};
 
-  // Load header if placeholder exists
-  if (headerPlaceholder) {
-    const headerPath = headerPlaceholder.getAttribute("data-src") || paths.header;
-    fetch(headerPath)
-      .then((response) => response.text())
-      .then((data) => {
-        headerPlaceholder.innerHTML = data;
+document.addEventListener("DOMContentLoaded", initializePage);
 
-        // After injecting header, also load logo into any logo slots, including inside header
-        if (logoPlaceholders.length === 0) {
-          // Re-scan after header injection (header may contain a logo placeholder)
-          const headerLogoSlots = headerPlaceholder.querySelectorAll("#logo-component");
-          headerLogoSlots.forEach((slot) => injectLogo(slot));
-        } else {
-          logoPlaceholders.forEach((slot) => injectLogo(slot));
+async function initializePage() {
+    loadCSS(paths.componentsCss);
+
+    const user = await getAuthenticatedUser();
+    console.log(user);
+
+    const headerPlaceholder = document.getElementById("header-component");
+    const footerPlaceholder = document.getElementById("footer-component");
+
+    await Promise.all([
+        loadHeader(headerPlaceholder, user),
+        loadFooter(footerPlaceholder, user)
+    ]);
+
+    loadLogos();
+}
+
+async function loadHeader(placeholder, user) {
+    if (!placeholder) return;
+
+    try {
+        const isLoggedIn = !!user;
+        const headerPath = isLoggedIn ? paths.loggedHeader : paths.header;
+
+        // 1. Primeiro, injeta o HTML do header (seja logado ou não)
+        await injectComponent(placeholder, headerPath);
+
+        // 2. DEPOIS, APENAS se estiver logado, manipula o DOM para adicionar o nome
+        if (isLoggedIn) {
+            console.log("Utilizador autenticado, a tentar inserir o nome:", user);
+            const nomeUserElement = document.getElementById("NomeUser");
+            if (nomeUserElement) {
+                // Acede de forma segura, pois já sabemos que 'user' existe
+                nomeUserElement.textContent = user.user.Name;
+            }
         }
-      })
-      .catch((error) => {
-        console.error("Erro ao carregar o header:", error);
-        headerPlaceholder.innerHTML = "<p>Erro ao carregar o header.</p>";
-      });
-  }
 
-  // Load footer if placeholder exists
-  if (footerPlaceholder) {
-    fetch(paths.footer)
-      .then((response) => response.text())
-      .then((data) => {
-        footerPlaceholder.innerHTML = data;
-      })
-      .catch((error) => {
-        console.error("Erro ao carregar o footer:", error);
-        footerPlaceholder.innerHTML = "<p>Erro ao carregar o footer.</p>";
-      });
-  }
+        // 3. A lógica do logo continua a ser executada no final
+        loadLogos(placeholder);
 
-  // If page wants standalone logo (like login), inject it
-  if (logoPlaceholders.length > 0) {
-    logoPlaceholders.forEach((slot) => injectLogo(slot));
-  }
+    } catch (error) {
+        console.error("Falha crítica ao carregar o header:", error);
+        placeholder.innerHTML = "<p>Erro ao carregar o cabeçalho.</p>";
+    }
+}
 
-  function injectLogo(targetElement) {
-    fetch(paths.logo)
-      .then((response) => response.text())
-      .then((logoData) => {
-        targetElement.innerHTML = logoData;
-        loadCSS(paths.componentsCss);
-      })
-      .catch((error) => {
-        console.error("Erro ao carregar a logo:", error);
-        targetElement.innerHTML = "<p>Erro ao carregar a logo.</p>";
-      });
-  }
-});
+async function loadFooter(placeholder, user) {
+    if (!placeholder) return;
+    try {
+        const isLoggedIn = !!user;
+        const footerPath = isLoggedIn ? paths.footerLogged : paths.footer;
+        await injectComponent(placeholder, footerPath);
+    }
+    catch (error) {
+        console.error("Falha crítica ao carregar o footer:", error);
+        placeholder.innerHTML = "<p>Erro ao carregar o rodapé.</p>";
+    }
+}
+
+async function loadLogos(scope = document) {
+    const logoPlaceholders = scope.querySelectorAll("#logo-component");
+    const promises = Array.from(logoPlaceholders).map(slot => injectComponent(slot, paths.logo));
+    await Promise.all(promises);
+}
+
+async function getAuthenticatedUser() {
+    const token = localStorage.getItem('token');
+    if (!token) return false;
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/user/validtoken`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (response.ok) {
+            console.log("Status: Usuário autenticado.");
+            console.log(response);
+            return response.json();
+        } else {
+            console.log("Status: Token inválido ou expirado.");
+            localStorage.removeItem('token'); // Limpa o token inválido
+            return false;
+        }
+    } catch (error) {
+        console.error("Erro de rede ao validar token:", error);
+        return false;
+    }
+}
+
+async function injectComponent(placeholder, path) {
+    try {
+        const response = await fetch(path);
+        if (!response.ok) throw new Error(`Arquivo não encontrado: ${path}`);
+        const html = await response.text();
+        placeholder.innerHTML = html;
+    } catch (error) {
+        console.error(`Falha ao injetar componente de "${path}":`, error);
+        placeholder.innerHTML = `<p>Erro ao carregar componente.</p>`;
+    }
+}
+
+function loadCSS(href) {
+    if (!document.querySelector(`link[href="${href}"]`)) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = href;
+        document.head.appendChild(link);
+    }
+}
