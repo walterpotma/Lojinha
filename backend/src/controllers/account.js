@@ -41,8 +41,9 @@ export async function CreateUser(req, res) {
     try {
         const connection = await pool.getConnection();
 
-        const { Name, Email, Phone, Password, Image } = req.body;
+        const { Name, Email, Phone, Password } = req.body;
         let Active = false;
+        let Image = "https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png";
 
         const [info] = await connection.execute(CREATE_USER, [Name, Email, Phone, Password, Image, Active]);
         const [result] = await connection.execute(GET_BY_ID, [info.insertId]);
