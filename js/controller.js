@@ -7,7 +7,7 @@ const paths = {
     footerLogged: "/components/logged/html/footer.html",
     logo: "/components/logo.html",
     componentsCss: "/css/components.css",
-    
+
 };
 
 document.addEventListener("DOMContentLoaded", initializePage);
@@ -44,8 +44,10 @@ async function loadHeader(placeholder, user) {
             console.log("Utilizador autenticado, a tentar inserir o nome:", user);
             const nomeUserElement = document.getElementById("NomeUser");
             if (nomeUserElement) {
-                // Acede de forma segura, pois já sabemos que 'user' existe
-                nomeUserElement.textContent = user.user.Name;
+                nomeUserElement.innerHTML = `
+                    <img src="${user.user.Image || '/images/default-avatar.png'}" alt="Avatar" class="avatar">
+                    <span>${user.user.Name}</span>
+                `;
             }
         }
 

@@ -18,6 +18,18 @@ header {
   margin: 0 auto;
 }
 
+#NomeUser {
+  font-style: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#NomeUser img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+}
+
 /* Logo Component - Reutilizável */
 .logo-component {
   display: flex;

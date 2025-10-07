@@ -61,7 +61,35 @@ function paginate(items, currentPage, itemsPerPage) {
 //     }
 // }
 
+async function Register(event) {
+    event.preventDefault();
+    const name = document.getElementById("Name").value;
+    const email = document.getElementById("Email").value;
+    const telefone = document.getElementById("Phone").value;
+    const password = document.getElementById("password").value;
+    try {
+        console.log(name, email, telefone, password);
 
+        const response = await fetch(`${API_BASE_URL}/user`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ Name: name, Phone: telefone, Email: email, Password: password })
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+            console.log("Registro bem-sucedido:", result);
+            window.location.href = "../../index.html";
+        } else {
+            console.log("Registro falhou:", result.message);
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
 
 async function Login(event) {
     event.preventDefault();
