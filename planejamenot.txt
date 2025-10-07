@@ -29,7 +29,3 @@
 ===================================
 
 matheus fazer (não esquecer)
-
-botão register.html
-
-colocar links no footer logado e n logado
