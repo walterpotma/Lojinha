@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <header id="unlogged-header-component"></header>
+  <header id="header-component"></header>
 
   <main class="container">
     <section class="banner">
@@ -99,22 +99,55 @@
             </div>
             <h3>Teclado</h3>
           </button>
-                    <button class="category-card">
+          <button class="category-card">
             <div class="category-icon">
               <i class="fa-solid fa-ellipsis"></i>
             </div>
-            <h3>Batatas</h3>
+            <h3>Microfene</h3>
           </button>
         </div>
       </div>
 
     </section>
 
+
     <section class="product-section">
       <div class="section-title">
-        <h3>Produtos Top</h3>
+        <h3>Nome da Categoria selecionada</h3>
+
+        <div class="filter-container">
+          <button id="open-filters-btn" class="open-filters-btn">
+            Filtros
+            <i class="fa-solid fa-filter"></i>
+          </button>
+
+          <div class="filter-popover" id="filter-popover">
+            <div class="filter-group">
+              <h4>Filtrar por Preço</h4>
+              <div class="price-inputs">
+                <input type="number" id="price-min" placeholder="Mínimo" class="price-input" min="0" value="0">
+                <input type="number" id="price-max" placeholder="Máximo" class="price-input" min="0">
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h4>Ordenar por</h4>
+              <select id="sort-options" class="sort-select">
+                <option value="relevance">Relevância</option>
+                <option value="price-desc">Maior Valor</option>
+                <option value="price-asc">Menor Valor</option>
+              </select>
+            </div>
+
+            <div class="popover-actions">
+              <button id="clear-filters-btn" class="clear-btn">Limpar</button>
+              <button id="apply-filters-btn" class="apply-btn">Aplicar</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="product-grid">
+
+      <div id="product-grid" class="product-grid">
         <div class="product-card">
           <div class="product-image-container">
             <img src="./img/batata.png" alt="Nome do Produto" class="product-image" />
@@ -175,11 +208,11 @@
   </main>
 
   <footer>
-    <div id="unlogged-footer-component"></div>
+    <div id="footer-component"></div>
   </footer>
   <script src="./js/index.js"></script>
   <script src="./js/global.js"></script>
-  <script src="./components/unlogged/js/controller.js"></script>
+  <script src="js/controller.js"></script>
 </body>
 
 </html>

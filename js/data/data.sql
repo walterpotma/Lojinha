@@ -1,3 +1,5 @@
+
+drop database marketplus;
 create database marketplus;
 use marketplus;
 create table User(
@@ -31,13 +33,12 @@ create table Kart(
     Quantity int not null
 );
 
-create table Purchasse (
+create table Payment (
     Id int primary key auto_increment,
     UserId int not null,
     KartId int not null,
     Total decimal(10,2) not null,
     Status varchar(100) not null,
-    Metode varchar(100) not null,
     CreatedAt timestamp default current_timestamp,
     FinishAt timestamp default current_timestamp on update current_timestamp
 );
@@ -53,12 +54,7 @@ create table Address (
     State varchar(100) not null
 );
 
-create table Payment(
-    Id int primary key auto_increment,
-    Metode varchar(100) not null,
-    Info varchar(100) not null,
-    CreatedAt timestamp default current_timestamp
-);  
+
 
 insert into User 
 ( Name, Email, Phone, Password, Image, Active )
@@ -86,17 +82,15 @@ values
 ( 2, 6, 1 ),
 ( 3, 1, 1 );
 
-insert into Purchasse ( UserId, KartId, Total, Status )
+insert into Payment ( UserId, KartId, Total, Status )
 values
-( 1, 1, 2999.9, 'Aprovado', 'Pix' ),
-( 1, 2, 1599.9, 'Aprovado', 'Boleto' ),
-( 1, 3, 987.9, 'Pendente', 'Boleto' ),
-( 2, 4, 1699.9, 'Aprovado', 'Boleto' ),
-( 2, 5, 2199.9, 'Recusado', 'Credito' ),
-( 2, 6, 2999.9, 'Aprovado', 'Debito' ),
-( 3, 7, 987.9, 'Pendente', 'Pix' );
-
-
+( 1, 1, 2999.9, 'Aprovado' ),
+( 1, 2, 1599.9, 'Aprovado' ),
+( 1, 3, 987.9, 'Pendente' ),
+( 2, 4, 1699.9, 'Aprovado' ),
+( 2, 5, 2199.9, 'Recusado' ),
+( 2, 6, 2999.9, 'Aprovado' ),
+( 3, 7, 987.9, 'Pendente' );
 
 insert into Address ( UserId, Street, Number, Complement, District, City, State )
 values
