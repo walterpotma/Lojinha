@@ -102,6 +102,7 @@ body{
   border-radius: .5em;
   background: none;
   cursor: pointer;
+  color: var(--accent);
 
   svg{
     transition: rotate 150ms ease;
