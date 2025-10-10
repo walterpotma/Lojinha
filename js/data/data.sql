@@ -1,5 +1,4 @@
 
-drop database marketplus;
 create database marketplus;
 use marketplus;
 create table User(

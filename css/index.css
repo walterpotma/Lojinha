@@ -269,8 +269,8 @@
 
 .open-filters-btn {
   background-color: var(--bg-light);
-  color: #fff;
-  border: 1px solid : var(--input-bg);
+  color: white;
+  border: 1px solid: var(--input-bg);
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;

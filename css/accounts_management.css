@@ -274,3 +274,36 @@ button{
   background-color: var(--accent-dark);
   transition: all 0.3s;
 }
+/* ================================================= */
+/* === CÓDIGO DE RESPONSIVIDADE PARA TELAS PEQUENAS === */
+/* ================================================= */
+
+@media (max-width: 480px) {
+
+    /* 1. Ajusta o container principal para telas pequenas */
+    .form-container {
+        /* Remove o alinhamento central vertical para o conteúdo começar do topo */
+        justify-content: flex-start; 
+        /* Adiciona um espaçamento geral */
+        padding: 40px 15px; 
+        /* Garante que a altura se ajuste ao conteúdo */
+        height: auto;
+        min-height: 100vh;
+    }
+
+    /* 2. Faz o formulário ocupar a largura da tela, em vez dos 400px fixos */
+    form {
+        width: 100%;
+        padding: 20px; /* Reduz um pouco o padding interno */
+    }
+
+    /* 3. Garante que os outros elementos (links, botões) também se ajustem */
+    .forgot-password,
+    .divider,
+    .g_id_signin,
+    .create-account {
+        /* A largura se ajusta ao container pai, que agora tem padding */
+        width: 100%;
+        max-width: 400px; 
+    }
+}
