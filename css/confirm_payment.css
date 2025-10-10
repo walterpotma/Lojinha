@@ -1,97 +1,202 @@
 @import url("../css/global.css");
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
 
-
-.methods img {
-    width: 35px;
-    padding: 5px;
-    background-color: white;
-    border-radius: 100%;
-    align-items: center;
-}
-
-.texth1 {
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
-
-.texth2 {
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-.play {
-    width: 150px;
-    padding: 8px;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.camps {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-    border-top: solid 1px var(--text-secondary);
-    padding-bottom: 10px;
-}
-.summary{
-    padding-bottom: 10px;
-    font-weight: bold;
-    font-size: 20px;
-}
-.payment-option {
-    width: 90%;
-    background-color: var(--bg-light);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    gap: 15px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    border: 2px solid transparent;
-    transition: border-color 0.2s;
-}
+/* --- LAYOUT PRINCIPAL --- */
 .central {
     width: 80%;
     margin: auto;
     display: flex;
-    gap: 30px;
-
+    gap: 40px; /* Aumentei o espaço entre as colunas */
 }
 
 .methods {
     flex: 1;
     display: flex;
-    gap: 10px;
     flex-direction: column;
 }
 
-.invoice {
-    width: 350px;
-    height: fit-content;
-    margin-top: 40px;
-    border-radius: 5px;
-    background-color: var(--bg-light);
-    padding: 30px;
+/* --- TÍTULOS --- */
+.texth1 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 28px; /* Aumentei um pouco para mais destaque */
+    color: var(--text-primary);
 }
 
+.texth2 {
+    margin-top: 25px; /* Mais espaço para separar as seções */
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* --- OPÇÕES DE PAGAMENTO (GRANDE MUDANÇA AQUI) --- */
+.payment-option {
+    width: 100%; /* Ocupa todo o espaço disponível */
+    background-color: var(--bg-light);
+    border-radius: 8px; /* Bordas mais arredondadas */
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 2px solid var(--bg-light); /* Borda inicial sutil */
+    transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+}
+
+/* NOVO: Efeito ao passar o mouse */
+.payment-option:hover {
+    border-color: var(--primary-light);
+    background-color: var(--card-hover);
+}
+
+/* NOVO: Estilo da opção selecionada */
+/* O seletor :has() é moderno e seleciona o .payment-option que TEM um input:checked dentro dele */
+.payment-option:has(input:checked) {
+    border-color: var(--primary);
+    background-color: var(--bg-medium);
+    box-shadow: 0 4px 15px rgba(42, 109, 245, 0.2); /* Sombra para dar profundidade */
+}
+
+.payment-option p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Esconde o radio button original, pois o card inteiro agora é clicável */
+.payment-option input.check {
+    display: none;
+}
+
+
+.methods img {
+    width: 40px; /* Aumentei o ícone */
+    height: 40px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- FATURA / RESUMO DA COMPRA --- */
+.invoice {
+    width: 380px; /* Um pouco mais largo */
+    height: fit-content;
+    margin-top: 40px;
+    border-radius: 8px;
+    background-color: var(--bg-medium); /* Cor de fundo um pouco diferente para destacar */
+    padding: 30px;
+    border: 1px solid var(--bg-light); /* Borda sutil */
+}
+
+.summary {
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: 22px;
+    color: var(--text-primary);
+}
+
+.camps {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0; /* Mais espaçamento vertical */
+    border-top: solid 1px var(--bg-light);
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+/* NOVO: Destaque para a linha e o valor do TOTAL */
+.camps.total-row {
+    margin-top: 10px;
+    border-top: 2px solid var(--bg-light);
+}
+
+.camps.total-row p {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+/* --- BOTÃO DE CONTINUAR --- */
+.play {
+    width: 100%; /* Ocupa toda a largura da coluna */
+    max-width: 250px; /* Mas com um limite máximo */
+    padding: 12px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer;
+    margin-top: 20px; /* Espaço antes do botão */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* NOVO: Efeito ao passar o mouse no botão */
+.play:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px); /* Leve animação de subir */
+    box-shadow: 0 4px 12px rgba(42, 109, 245, 0.25);
+}
+/* --- ÍCONES DE PAGAMENTO --- */
+
+/* Estilo para a imagem do PIX (continua o mesmo) */
+.payment-option img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* NOVO E CORRIGIDO: Estilo para os ícones de cartão */
+.payment-option i {
+    /* Cria o círculo de fundo */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--bg-light); /* Fundo da cor do tema */
+
+    /* Centraliza o ícone dentro do círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Estilo do ícone em si */
+    font-size: 20px;
+    color: var(--text-primary);
+    transition: all 0.3s ease; /* Adiciona transição suave */
+}
+
+/* Muda a cor do ícone quando a opção está selecionada */
+.payment-option:has(input:checked) i {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* --- AJUSTES PARA TELAS MENORES --- */
 @media (max-width: 768px) {
     .central {
         flex-direction: column;
         width: 95%;
+        gap: 20px;
     }
 
     .invoice {
         width: 100%;
         margin-top: 20px;
+        order: -1; /* NOVO: Move o resumo para o topo em telas pequenas */
+    }
+
+    .play {
+        width: 100%;
+        max-width: none;
     }
 }

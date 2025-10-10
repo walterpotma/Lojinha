@@ -1,80 +1,144 @@
 @import url("../css/global.css");
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
 
-.foto_perfil {
-  width: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
+/* --- LAYOUT GERAL --- */
+.main_box {
+    margin-top: 60px; /* Reduzi um pouco a margem */
+    margin-bottom: 100px;
 }
 
 .main_box_2 {
-  width: 80%;
-  margin: auto;
+    width: 85%;
+    max-width: 1200px; /* Adicionei um max-width */
+    margin: auto;
 }
 
-.box {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  gap: 5px;
-  transition: all 0.5s ease;
-  background-color: var(--card-hover);
+/* --- SEÇÃO DE DADOS DO CLIENTE (MUDANÇA PRINCIPAL) --- */
+.customer_data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* MODIFICADO */
+    text-align: left;       /* MODIFICADO */
+    margin-bottom: 60px;
+}
+.customer_data h3 {
+    font-size: 28px; /* Nome maior e mais destacado */
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
-.boxs {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+.customer_data p {
+    font-size: 16px;
+    color: var(--text-secondary); /* Cor secundária para o email */
 }
 
-.box:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-  transition: all 0.5s ease;
-  background-color: var(--card-bg);
-}
-
-.main_box {
-  margin-bottom: 100px;
-  margin-top: 80px;
-}
-
+/* --- FOTO DE PERFIL E EFEITO DE EDIÇÃO --- */
 .edit {
-  position: relative;
-  display: inline-block;
-  width: 120px;
-  height: 120px;
+    position: relative;
+    width: 120px;
+    height: 120px;
 }
 
 .profile_photo {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  display: block;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+    border: 3px solid var(--primary); /* Borda colorida na foto */
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-weight: bold;
-  cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Para alinhar ícone e texto */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+.overlay i {
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
 .edit:hover .overlay {
-  opacity: 1;
+    opacity: 1;
+}
+
+
+/* --- GRID DE CARDS DE NAVEGAÇÃO (MUDANÇA PRINCIPAL) --- */
+.boxs {
+    margin-top: 40px;
+    display: grid;
+    /* Deixei o minmax um pouco maior para mais respiro */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.box {
+    background-color: var(--bg-medium); /* Fundo um pouco mais escuro */
+    border-radius: 8px;
+    border: 1px solid var(--bg-light);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Ajustei o espaçamento interno */
+    transition: all 0.3s ease; /* Transição mais rápida */
+    cursor: pointer; /* Adiciona o cursor de link */
+}
+
+/* NOVO: Ícones maiores e com cor de destaque */
+.box i {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* NOVO: Estilo para o título do card (h4) */
+.box h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0; /* Remove margem padrão do h4 */
+}
+
+/* NOVO: Estilo para a descrição do card (p) */
+.box p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5; /* Melhora a legibilidade */
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+/* AJUSTES FINOS OPCIONAIS PARA TELAS PEQUENAS */
+@media (max-width: 480px) {
+    .customer_data h3 {
+        font-size: 24px; /* Diminui um pouco o nome do cliente */
+    }
+
+    .box {
+        padding: 20px; /* Diminui o espaçamento interno dos cards */
+        text-align: center; /* Centraliza o conteúdo do card no celular */
+    }
+
+    .box i {
+        margin: 0 auto 10px; /* Centraliza o ícone horizontalmente */
+    }
 }

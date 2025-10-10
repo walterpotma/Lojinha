@@ -1,0 +1,360 @@
+@import url("../css/global.css");
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+
+/* --- ESTILOS GERAIS E RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- CABEÇALHO SIMPLIFICADO --- */
+.main-header {
+    background-color: var(--bg-medium);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--bg-dark);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: var(--text-primary);
+}
+
+/* --- BREADCRUMB --- */
+.breadcrumb {
+    padding: 15px 0;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+.breadcrumb a {
+    color: var(--primary-light);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* --- LAYOUT DO PRODUTO --- */
+.product-container {
+    display: flex;
+    gap: 40px;
+    /* Espaço entre as colunas */
+    margin-top: 20px;
+}
+
+.product-gallery {
+    flex: 1;
+    /* Ocupa 50% do espaço */
+}
+
+.product-info {
+    flex: 1;
+    /* Ocupa 50% do espaço */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- GALERIA DE IMAGENS (COLUNA ESQUERDA) --- */
+.main-image {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--bg-light);
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid var(--bg-light);
+    transition: border-color 0.2s;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    border-color: var(--success);
+}
+
+
+/* --- INFORMAÇÕES DO PRODUTO (COLUNA DIREITA) --- */
+.product-ratings {
+    color: var(--warning);
+    /* Cor de estrela */
+    margin-bottom: 10px;
+}
+
+.product-ratings span {
+    color: var(--text-secondary);
+    margin-left: 8px;
+}
+
+.product-info h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.price-block {
+    background-color: var(--bg-medium);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid var(--bg-light);
+}
+
+.old-price {
+    font-size: 1em;
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.current-price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--success);
+    display: block;
+    margin: 5px 0;
+}
+
+.pix-price,
+.installments {
+    font-size: 1em;
+    color: var(--text-secondary);
+}
+
+.shipping-info {
+    margin-bottom: 25px;
+}
+
+.stock-status .in-stock {
+    color: var(--success);
+    font-weight: bold;
+}
+
+.cep-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.cep-form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid var(--bg-light);
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border-radius: 4px 0 0 4px;
+}
+
+.cep-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    font-weight: bold;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-buy,
+.btn-add-to-cart {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.btn-buy {
+    background-color: var(--success);
+    color: var(--bg-dark);
+}
+
+.btn-buy:hover {
+    background-color: var(--accent-dark);
+    /* Usei o accent-dark para o hover do success */
+}
+
+.btn-add-to-cart {
+    background-color: transparent;
+    color: var(--success);
+    border: 2px solid var(--success);
+}
+
+.btn-add-to-cart:hover {
+    background-color: rgba(34, 197, 94, 0.1);
+    /* Um leve fundo verde no hover */
+}
+
+/* --- SEÇÃO DE DETALHES --- */
+.product-details {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--bg-light);
+    padding-bottom: 40px;
+}
+
+.product-details h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: var(--primary-light);
+}
+
+.product-details p {
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.specs-table tr:nth-child(even) {
+    background-color: var(--bg-medium);
+}
+
+.specs-table tr td:first-child {
+    font-weight: bold;
+    width: 30%;
+}
+
+/* --- Container do Título do Produto --- */
+.product-title-header {
+    display: flex;
+    justify-content: space-between;
+    /* Manda o título para a esquerda e o botão para a direita */
+    align-items: flex-start;
+    /* Alinha os itens no topo */
+    gap: 16px;
+    /* Adiciona um espaço caso o título quebre a linha */
+    margin-bottom: 20px;
+    /* Mantém o espaço antes do bloco de preços */
+}
+
+/* --- BOTÃO DE COMPARTILHAR (ESTILO CÍRCULO) --- */
+.share-button {
+    /* Transforma em círculo */
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    /* Centraliza o ícone dentro do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--bg-light);
+
+    /* REMOVEMOS O 'margin-top' e 'align-self' DAQUI */
+    flex-shrink: 0;
+    /* Impede que o botão encolha se o título for muito grande */
+
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* --- BOTÃO DE COMPARTILHAR (ESTILO CÍRCULO) --- */
+.share-button {
+    /* Transforma em círculo */
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    /* Essencial para fazer o círculo */
+
+    /* Centraliza o ícone dentro do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--bg-light);
+
+    margin-top: 15px;
+    /* Espaço acima do bloco de preço */
+    align-self: flex-start;
+    /* Alinha o botão à esquerda */
+
+    font-size: 1.1em;
+    /* Tamanho do ícone */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.share-button:hover {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    border-color: var(--card-hover);
+}
+
+/* Estilo para quando o link for copiado (feedback visual) */
+.share-button.copied {
+    background-color: var(--success);
+    color: var(--bg-dark);
+    border-color: var(--success);
+    transform: scale(1.1);
+    /* Efeito de "pop" para chamar atenção */
+}
+
+
+/* --- RESPONSIVIDADE PARA CELULARES --- */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        /* Empilha as colunas */
+    }
+
+    .product-info h1 {
+        font-size: 1.5em;
+    }
+
+    .current-price {
+        font-size: 2em;
+    }
+}
