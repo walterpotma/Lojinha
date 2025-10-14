@@ -3,7 +3,7 @@
 
 /* --- BANNER PROMOCIONAL --- */
 .promo-banner {
-    background: linear-gradient(90deg, rgba(239, 68, 68, 0.95), rgba(219, 39, 119, 0.95)), url('sua-imagem-de-fundo.jpg');
+    background: linear-gradient(90deg, rgba(239, 68, 68, 0.95) rgba(219, 39, 119, 0.95)), url('sua-imagem-de-fundo.jpg');
     background-size: cover;
     border-radius: 12px;
     padding: 30px 40px;
@@ -62,6 +62,8 @@
     border-radius: 8px;
     border: 1px solid var(--bg-light);
     height: fit-content;
+    position: sticky;
+    top: 140px;
 }
 .filter-sidebar h3 {
     font-size: 1.2rem;
