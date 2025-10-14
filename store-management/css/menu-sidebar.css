@@ -26,7 +26,7 @@ body{
 }
 #sidebar.close{
   padding: 5px;
-  width: 60px;
+  width: 50px;
 }
 #sidebar ul{
   list-style: none;
@@ -102,11 +102,15 @@ body{
   border-radius: .5em;
   background: none;
   cursor: pointer;
-
+  color: var(--text-primary);
   svg{
     transition: rotate 150ms ease;
   }
 }
+
+
+  
+
 #toggle-btn:hover{
   background-color: var(--bg-medium);
 }
