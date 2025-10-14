@@ -1,24 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorias</title>
-    <link rel="stylesheet" href="/store-management/css/global.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorias</title>
+  <link rel="stylesheet" href="/store-management/css/global.css">
+  <link rel="stylesheet" href="/store-management/css/category.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body>
-    <div id="sidebar"></div>
-    <main>
-        <h1>Lista de Categorias</h1>
-    
-        <div class="card-list">
-            <span>
-                <p class="simbol-category"></p>
-                <p class="title-category"></p>
-               
-            </span>
+  <div id="sidebar"></div>
+  <main>
+    <div class="page-tittle">
+      <h1>Lista de Categorias</h1>
+    </div>
+    <!-- CATEGORIAS PRINCIPAIS -->
+    <div class="card-list-table">
+        <p>Principal</p>
+      <div class="table-category">
+        <div class="card" draggable="true">
+          <span class="simbol-category">
+            <div class="icon-category">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+          </span>
+          <div class="tittle">
+            <p>Título</p>
+          </div>
+          <div class="manage">
+            <button><i class="fa-solid fa-pen"></i></button>
+            <button><i class="fa-solid fa-trash"></i></button>
+          </div>
         </div>
-    </main>
-    <script src="../../../js/controller.js"></script>
+
+        <div class="card" draggable="true">
+          <span class="simbol-category">
+            <div class="icon-category">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+          </span>
+          <div class="tittle">
+            <p>Título</p>
+          </div>
+          <div class="manage">
+            <button><i class="fa-solid fa-pen"></i></button>
+            <button><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+
+        <div class="card" draggable="true">
+          <span class="simbol-category">
+            <div class="icon-category">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+          </span>
+          <div class="tittle">
+            <p>Título</p>
+          </div>
+          <div class="manage">
+            <button><i class="fa-solid fa-pen"></i></button>
+            <button><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        <!-- CATEGORIA OUTROS -->
+    <div class="card-list-table">
+        <p>Outros</p>
+      <div class="table-category">
+        <div class="card" draggable="true">
+          <span class="simbol-category">
+            <div class="icon-category">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+          </span>
+          <div class="tittle">
+            <p>Título</p>
+          </div>
+          <div class="manage">
+            <button><i class="fa-solid fa-pen"></i></button>
+            <button><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+
+        <div class="card" draggable="true">
+          <span class="simbol-category">
+            <div class="icon-category">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+          </span>
+          <div class="tittle">
+            <p>Título</p>
+          </div>
+          <div class="manage">
+            <button><i class="fa-solid fa-pen"></i></button>
+            <button><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+
+        <div class="card" draggable="true">
+          <span class="simbol-category">
+            <div class="icon-category">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+          </span>
+          <div class="tittle">
+            <p>Título</p>
+          </div>
+          <div class="manage">
+            <button><i class="fa-solid fa-pen"></i></button>
+            <button><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="../../../js/controller.js"></script>
 </body>
+
 </html>
+`
