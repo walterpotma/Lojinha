@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - MarketPlus</title>
+    <link rel="icon" href="/img/MarketPlus_Logo/icon.png" type="image/png">
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/suport.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header id="header-component"></header>
+
+    <main>
+        <section class="support-header">
+            <h1>Olá, como podemos te ajudar?</h1>
+        </section>
+
+        <div class="support-content">
+            <div class="support-form-card">
+                <form id="support-form">
+                    <h2><i class="bi bi-envelope"></i> Envie sua mensagem</h2>
+                    <p class="form-subtitle">Preencha os campos abaixo e retornaremos o mais breve possível.</p>
+
+                    <div class="form-field">
+                        <label for="support-email">Seu e-mail</label>
+                        <input type="email" id="support-email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="support-message">Sua dúvida, pergunta ou sugestão</label>
+                        <textarea id="support-message" name="message" rows="6" placeholder="Digite sua mensagem aqui..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="button-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-component"></footer>
+    <script src="../../js/controller.js"></script>
+    <script src="../../js/global.js"></script>
+</body>
+
+</html>
