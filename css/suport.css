@@ -1,0 +1,122 @@
+@import url("./global.css");
+
+/* --- BANNER SUPERIOR VERMELHO --- */
+.support-header {
+    /* Usei um vermelho forte, similar ao da Pichau */
+    background-color: #10B981;
+    color: white;
+    text-align: center;
+    padding: 80px 20px 100px 20px; /* Padding extra na parte de baixo para o card sobrepor */
+}
+
+.support-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* --- ÁREA DO CONTEÚDO (PARA CENTRALIZAR O CARD) --- */
+.support-content {
+    display: flex;
+    justify-content: center;
+    /* Efeito de sobreposição do card no banner */
+    margin-top: -70px; 
+    position: relative;
+    z-index: 10;
+    padding: 0 20px 50px 20px;
+}
+
+/* --- O CARD DO FORMULÁRIO --- */
+.support-form-card {
+    width: 100%;
+    max-width: 650px;
+    background-color: var(--bg-medium);
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid var(--bg-light);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.support-form-card h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+/* --- ESTILOS DO FORMULÁRIO --- */
+#support-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.form-field input,
+.form-field textarea {
+    padding: 12px 15px;
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--bg-light);
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(42, 109, 245, 0.25);
+}
+
+/* Redimensionamento vertical para a área de texto */
+.form-field textarea {
+    resize: vertical;
+}
+
+/* Botão de Enviar */
+#support-form .button-primary {
+    height: 45px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+#support-form .button-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .support-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .support-form-card {
+        padding: 30px;
+    }
+}

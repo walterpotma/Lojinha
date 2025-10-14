@@ -40,7 +40,9 @@ html {
     --error: #ef4444;
     --info: #3b82f6;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-dark);

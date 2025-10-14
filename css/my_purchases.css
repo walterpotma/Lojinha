@@ -137,14 +137,12 @@
 /* --- RESUMO DA COMPRA (DIREITA) COM EFEITO STICKY --- */
 .price_box {
     width: 350px;
-    /* Faz o elemento 'grudar' no topo ao rolar a página */
     position: sticky;
     top: 140px;
-
     background-color: var(--bg-medium);
     border-radius: 8px;
     border: 1px solid var(--bg-light);
-    overflow: hidden; /* Garante que os cantos arredondados funcionem */
+    overflow: hidden;
 }
 
 .price_header {
