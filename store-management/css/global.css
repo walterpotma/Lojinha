@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -16,7 +17,7 @@ html {
 
     /* Cores de destaque (accent) - usadas para preços, ações, elementos secundários */
     --accent: #10b981;
-    --accent-dark: #0da271; 
+    --accent-dark: #0da271;
     --accent-light: #34d399;
 
     /* Cores de fundo - usadas para backgrounds principais e secundários */
