@@ -1,43 +1,62 @@
 @import url("../css/global.css");
 
+.page-tittle {
+  margin-bottom: 30px;
+}
+
 .page-tittle h1 {
-  margin-bottom: 20px;
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .card-list-table {
   width: 100%;
-  margin-bottom: 35px;
-  max-width: fit-content;
+  margin-bottom: 30px;
   border: 1px solid var(--bg-light);
-  border-radius: 10px;;
-  padding: 0px 15px 15px 15px;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card-list-table p{
-  margin:0;
-  padding:2px;
-  text-align: center;
+.card-list-table>p {
+  margin: 0;
+  padding: 15px 20px;
+  background-color: var(--bg-medium);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--bg-light);
 }
 
 .table-category {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  width: 350px;
+  gap: 0;
+  padding: 15px;
 }
 
 .card {
   display: flex;
+  background-color: var(--bg-medium);
   align-items: center;
-  justify-content: flex-start;
-  width: 350px;
-  height: 70px;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 70px;
   border: 1px solid var(--bg-light);
   border-radius: 8px;
   cursor: grab;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+}
+
+.card:hover {
+  background-color: var(--card-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card:active {
@@ -45,56 +64,72 @@
 }
 
 .card.dragging {
-  opacity: 0.6;
+  opacity: 0.7;
   transform: scale(0.98);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .simbol-category {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background-color: var(--bg-medium);
-  border-radius: 50%;
-  margin-left: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .icon-category {
   color: var(--text-primary);
-  font-size: 1.5em;
+  font-size: 1.3rem;
 }
 
 .tittle {
-  margin-left: 15px;
-  font-size: 1.2em;
-  font-weight: 600;
+  flex: 1;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--text-primary);
+}
+
+.tittle p {
+  margin: 0;
 }
 
 .manage {
   display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: 10px;
-  width: 20px;
-  gap: 10px;
+  gap: 8px;
+  margin-left: 15px;
 }
 
 .manage button {
-  background: none;
+  margin: 0;
+  padding: 6px 12px;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.manage button:first-child {
+  background-color: var(--primary);
   color: var(--text-primary);
-  transition: color 0.4s;
 }
 
-.manage button:hover {
-  color: var(--text-secondary);
+.manage button:first-child:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
 }
 
-.manage button:focus {
-  color: var(--accent);
+.manage button:last-child {
+  background-color: var(--error);
+  color: var(--text-primary);
+}
+
+.manage button:last-child:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
 }

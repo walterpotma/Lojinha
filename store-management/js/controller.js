@@ -29,6 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 // Carrega o JS específico do sidebar
                 loadSidebarJS(sidebarPath);
+                
+                // Destaca a página ativa após carregar o sidebar
+                setTimeout(() => {
+                    if (typeof highlightActivePage === 'function') {
+                        highlightActivePage();
+                    }
+                }, 200);
             })
             .catch(error => {
                 console.error("Erro ao carregar a sidebar:", error);
