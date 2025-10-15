@@ -1,12 +1,12 @@
 'use strict';
 
 const paths = {
-    header: "/components/unlogged/html/header.html",
-    loggedHeader: "/components/logged/html/header.html",
-    footer: "/components/unlogged/html/footer.html",
-    footerLogged: "/components/logged/html/footer.html",
-    logo: "/components/logo.html",
-    componentsCss: "/css/components.css",
+    header: "/store/components/unlogged/html/header.html",
+    loggedHeader: "/store/components/logged/html/header.html",
+    footer: "/store/components/unlogged/html/footer.html",
+    footerLogged: "/store/components/logged/html/footer.html",
+    logo: "/store/components/logo.html",
+    componentsCss: "/store/css/components.css",
 
 };
 
