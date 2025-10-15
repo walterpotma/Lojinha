@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes - MarketPlus</title>
+    <link rel="icon" href="/img/MarketPlus_Logo/icon.png" type="image/png">
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/questions.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header id="header-component"></header>
+
+    <main class="container">
+        <div class="faq-header">
+            <h1>Perguntas Frequentes</h1>
+            <p>Encontre respostas para as suas principais dúvidas sobre pagamentos, envios, trocas e mais.</p>
+        </div>
+
+        <div class="faq-search">
+            <input type="text" id="faq-search-input" placeholder="Digite aqui sua dúvida...">
+            <i class="bi bi-search"></i>
+        </div>
+
+        <div class="faq-content">
+            <nav class="faq-categories">
+                <ul>
+                    <li><button class="category-btn active" data-category="pagamentos">Pagamentos</button></li>
+                    <li><button class="category-btn" data-category="envios">Envios e Prazos</button></li>
+                    <li><button class="category-btn" data-category="trocas">Trocas e Devoluções</button></li>
+                    <li><button class="category-btn" data-category="conta">Minha Conta</button></li>
+                </ul>
+            </nav>
+
+            <div class="faq-list">
+
+                <div id="pagamentos" class="faq-category-content active">
+                    <div class="faq-item">
+                        <button class="faq-question">Quais formas de pagamento são aceitas?<i
+                                class="bi bi-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Aceitamos as principais bandeiras de cartão de crédito (Visa, Mastercard, Elo), Pix e
+                                Boleto Bancário. Para pagamentos via Pix, oferecemos 15% de desconto!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">É seguro inserir os dados do meu cartão?<i
+                                class="bi bi-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Sim! Utilizamos uma plataforma de pagamento com criptografia de ponta a ponta (SSL) e
+                                certificação PCI-DSS. Seus dados estão completamente seguros e não são armazenados em
+                                nossos servidores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="envios" class="faq-category-content">
+                    <div class="faq-item">
+                        <button class="faq-question">Qual o prazo de entrega?<i class="bi bi-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>O prazo de entrega varia de acordo com o seu CEP e a modalidade de frete escolhida. Você
+                                pode calcular o prazo exato na página do produto ou no carrinho de compras antes de
+                                finalizar o pedido.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="trocas" class="faq-category-content">
+                    <div class="faq-item">
+                        <button class="faq-question">Posso devolver um produto e receber meu dinheiro de volta?<i
+                                class="bi bi-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Sim, você pode solicitar a devolução e o reembolso integral do valor pago. Conforme nossa
+                                política, para que o reembolso seja aprovado, o produto deve ser devolvido **em perfeito
+                                estado**, com a embalagem original, manuais e todos os acessórios, sem qualquer sinal de
+                                uso. O prazo para solicitar a devolução por arrependimento é de até 7 (sete) dias
+                                corridos após o recebimento. Para iniciar o processo, por favor, entre em contato com
+                                nossa equipe através da página de Suporte.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Recebi um produto com defeito. O que fazer?<i
+                                class="bi bi-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Lamentamos pelo ocorrido! Caso seu produto apresente defeito de fabricação, entre em
+                                contato imediatamente com nosso Suporte informando o número do pedido e enviando fotos
+                                ou vídeos que demonstrem o problema. Iremos providenciar a troca ou o reparo o mais
+                                rápido possível, sem custos para você.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="conta" class="faq-category-content">
+                    <div class="faq-item">
+                        <button class="faq-question">Como posso alterar meus dados cadastrais (e-mail, senha,
+                            endereço)?<i class="bi bi-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>É muito simples! Basta fazer login e acessar a seção 'Meu Perfil' no menu superior. Lá,
+                                você encontrará todas as opções para atualizar suas informações pessoais, endereços de
+                                entrega e alterar sua senha de forma segura.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Esqueci minha senha, como recupero o acesso?<i
+                                class="bi bi-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Na página de Login, clique no link "Esqueceu a senha?". Você será direcionado para uma
+                                página onde deverá informar seu e-mail de cadastro. Enviaremos um link seguro para que
+                                você possa criar uma nova senha e recuperar o acesso à sua conta.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <section class="faq-contact">
+            <h2>Não encontrou sua resposta?</h2>
+            <p>Nossa equipe de suporte está pronta para te ajudar. Entre em contato conosco!</p>
+            <a href="suport.html" class="button-primary">Ir para o Suporte</a>
+        </section>
+    </main>
+
+    <footer id="footer-component"></footer>
+
+    <script src="../../js/global.js"></script>
+    <script src="../../js/controller.js"></script>
+    <script src="../../js/questions.js"></script>
+
+</html>

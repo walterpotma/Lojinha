@@ -1,0 +1,140 @@
+@import url("./global.css");
+
+/* --- Cabeçalho da Página --- */
+.how-to-buy-header {
+    text-align: center;
+    margin: 50px 0;
+}
+.how-to-buy-header h1 {
+    font-size: 2.8rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+.how-to-buy-header p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Container do Passo a Passo --- */
+.steps-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* --- Item Individual do Passo a Passo --- */
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* --- Wrapper do Ícone (Círculo + Linha do Tempo) --- */
+.step-icon-wrapper {
+    position: relative;
+    z-index: 5;
+    /* Círculo do ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    background-color: var(--primary);
+    border-radius: 50%;
+    border: 3px solid var(--bg-medium);
+}
+.step-icon-wrapper i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* Linha do tempo vertical */
+.step-icon-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: var(--bg-light);
+    z-index: -1;
+}
+
+/* Remove a linha do último item */
+.steps-container .step-item:last-child .step-icon-wrapper::before {
+    display: none;
+}
+
+/* --- Textos do Passo a Passo --- */
+.step-text {
+    padding-top: 15px;
+}
+.step-text h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+.step-text p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Seção Final de Call to Action --- */
+.start-shopping {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 80px 0;
+    padding: 40px;
+    background-color: var(--bg-medium);
+    border-radius: 8px;
+}
+.start-shopping h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+.button-primary {
+    margin-top: 15px;
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .how-to-buy-header h1 {
+        font-size: 2.2rem;
+    }
+    .step-item {
+        gap: 20px;
+    }
+    .step-icon-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+    .step-icon-wrapper i {
+        font-size: 1.5rem;
+    }
+    .step-icon-wrapper::before {
+        top: 50px;
+    }
+    .step-text {
+        padding-top: 10px;
+    }
+}

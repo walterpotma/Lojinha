@@ -1,0 +1,181 @@
+@import url("./global.css");
+
+/* --- Cabeçalho da Página --- */
+.faq-header {
+    text-align: center;
+    margin: 50px 0;
+}
+.faq-header h1 {
+    font-size: 2.8rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+.faq-header p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Barra de Busca --- */
+.faq-search {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+#faq-search-input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--bg-light);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+#faq-search-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(42, 109, 245, 0.25);
+}
+.faq-search i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+/* --- Layout Principal (Categorias + Perguntas) --- */
+.faq-content {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+}
+
+/* --- Menu de Categorias --- */
+.faq-categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: sticky; /* Efeito de 'grudar' na tela */
+    top: 100px; /* Distância do topo ao grudar */
+}
+.category-btn {
+    width: 100%;
+    padding: 12px 15px;
+    background: none;
+    border: none;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.category-btn:hover {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+.category-btn.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* --- Acordeão de Perguntas e Respostas --- */
+.faq-category-content {
+    display: none; /* Esconde todas as categorias por padrão */
+}
+.faq-category-content.active {
+    display: block; /* Mostra apenas a categoria ativa */
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--bg-light);
+}
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.faq-question i {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+.faq-answer p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+.faq-item.active .faq-question i {
+    transform: rotate(45deg); /* Gira o '+' para formar um 'x' */
+}
+.faq-item.active .faq-answer {
+    max-height: 300px; /* Altura máxima para a resposta aparecer */
+    padding-bottom: 20px;
+    transition: max-height 0.4s ease-in, padding 0.4s ease-in;
+}
+
+/* --- Seção de Contato --- */
+.faq-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;
+    margin: 80px 0;
+    padding: 40px;
+    background-color: var(--bg-medium);
+    border-radius: 8px;
+}
+.faq-contact h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+.button-primary {
+    margin-top: 15px;
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .faq-content {
+        grid-template-columns: 1fr; /* Coluna única em telas pequenas */
+    }
+    .faq-categories {
+        margin-bottom: 30px;
+    }
+    .faq-categories ul {
+        position: static; /* Remove o efeito sticky */
+        display: flex;
+        flex-wrap: wrap; /* Permite que os botões quebrem a linha */
+        gap: 10px;
+    }
+    .category-btn {
+        width: auto;
+    }
+}

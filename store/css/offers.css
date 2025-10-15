@@ -3,7 +3,7 @@
 
 /* --- BANNER PROMOCIONAL --- */
 .promo-banner {
-    background: linear-gradient(90deg, rgba(239, 68, 68, 0.95) rgba(219, 39, 119, 0.95)), url('sua-imagem-de-fundo.jpg');
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
     background-size: cover;
     border-radius: 12px;
     padding: 30px 40px;
