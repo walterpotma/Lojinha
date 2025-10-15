@@ -54,6 +54,18 @@ async function loadHeader(placeholder, user) {
         // 3. A lógica do logo continua a ser executada no final
         loadLogos(placeholder);
 
+        // 4. Adiciona a lógica do menu mobile
+        const openMenu = document.getElementById("open-menu-btn");
+        const closeMenu = document.getElementById("close-menu-btn");
+        const menuResponsive = document.getElementById("sidebar-responsive");
+
+        openMenu.addEventListener("click", () => {
+            menuResponsive.style.width = "100%";
+        });
+
+        closeMenu.addEventListener("click", () => {
+            menuResponsive.style.width = "0";
+        });
     } catch (error) {
         console.error("Falha crítica ao carregar o header:", error);
         placeholder.innerHTML = "<p>Erro ao carregar o cabeçalho.</p>";

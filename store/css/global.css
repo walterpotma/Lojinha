@@ -39,6 +39,11 @@ html {
     --warning: #f59e0b;
     --error: #ef4444;
     --info: #3b82f6;
+
+    /* Telas para responsividade */
+    --phone: 360px;
+    --tablet: 768px;
+    --laptop: 1024px;
 }
 html {
     scroll-behavior: smooth;
