@@ -1,0 +1,116 @@
+@import url("./global.css");
+
+/* --- Cabeçalho da Página --- */
+.payment-methods-header {
+    text-align: center;
+    margin: 50px 0;
+}
+.payment-methods-header h1 {
+    font-size: 2.8rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+.payment-methods-header p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Grid dos Cards --- */
+.methods-grid {
+    display: grid;
+    /* Cria colunas responsivas: no mínimo 300px, mas se esticam */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* --- Estilo do Card Individual --- */
+.method-card {
+    background-color: var(--bg-medium);
+    border: 1px solid var(--bg-light);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.method-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.method-card i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+.method-card h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0 0 15px 0;
+}
+.method-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    min-height: 5em; /* Garante que os cards tenham uma altura mínima similar */
+}
+
+/* Bandeiras dos cartões */
+.card-flags {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+.card-flags img {
+    height: 30px;
+    filter: grayscale(100%) contrast(50%); /* Deixa os logos mais sutis */
+}
+
+/* --- Seção de Segurança --- */
+.security-info, .more-help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: var(--bg-medium);
+    border-radius: 8px;
+    max-width: 800px;
+}
+.security-info i {
+    font-size: 2.5rem;
+    color: var(--success); /* Verde para segurança */
+    margin-bottom: 15px;
+}
+.security-info h2, .more-help h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+.security-info p, .more-help p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+.button-primary {
+    margin-top: 15px;
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .payment-methods-header h1 {
+        font-size: 2.2rem;
+    }
+}
