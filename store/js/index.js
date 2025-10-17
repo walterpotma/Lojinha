@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const maisCategorias = document.getElementById("mais-categorias");
 
     btnOutros.addEventListener("click", () => {
-        maisCategorias.classList.toggle("mostrar");
+        maisCategorias.classList.toggle("active");
 
-        if (maisCategorias.classList.contains("mostrar")) {
+        if (maisCategorias.classList.contains("active")) {
             btnOutros.querySelector("h3").textContent = "Mostrar menos";
         } else {
             btnOutros.querySelector("h3").textContent = "Outros";

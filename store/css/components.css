@@ -24,6 +24,7 @@ header {
   align-items: center;
   gap: 8px;
 }
+
 #NomeUser img {
   width: 32px;
   height: 32px;
@@ -218,6 +219,7 @@ footer {
   margin-bottom: 30px;
   justify-items: center
 }
+
 .footer-column-title h3 {
   color: var(--text-primary);
   font-size: 1.2rem;
@@ -246,7 +248,7 @@ footer {
   list-style: none;
 }
 
-.footer-column li{
+.footer-column li {
   margin-bottom: 12px;
   transform: scale(1);
   transition: all 0.3s;
@@ -255,7 +257,7 @@ footer {
 .footer-column li:hover {
   transform: scale(1.1);
   transition: transform 0.3s;
-  
+
 }
 
 .footer-column li a {
@@ -304,4 +306,98 @@ footer {
 
 .social-links a:hover {
   background-color: var(--primary);
+}
+
+
+
+.logo-responsive {
+  display: none;
+}
+.sidebar-responsive {
+  display: none;
+}
+
+@media(max-width: 360px) {
+  .navbar {
+    flex-wrap: wrap;
+    flex-direction: space-between;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  .logo-component {
+    display: none;
+  }
+
+  .logo-responsive {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-responsive .logo-component {
+    display: flex;
+  }
+
+  .menu-btn {
+    padding: 10px 5px;
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 25px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  #close-menu-btn {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+  }
+  .categories-menu {
+    display: none;
+  }
+  .sidebar-responsive {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: end;
+    transition: .3s;
+    overflow: hidden;
+    z-index: 10000;
+  }
+  .sidebar-responsive .list{
+    width: 80%;
+    height: 100%;
+    padding: 10px 20px;
+    background: var(--bg-medium);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 7px;
+  }
+  .sidebar-responsive .list li {
+    width: 100%;
+    list-style: none;
+  }
+  .sidebar-responsive .list li a{
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: var(--bg-dark);
+    
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
 }

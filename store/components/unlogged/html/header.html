@@ -1,11 +1,19 @@
 <head>
-    <link rel="stylesheet" href="../../../css/components.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../../../css/components.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <header>
   <div class="container">
     <div class="navbar">
       <div id="logo-component"></div>
+
+      <div class="logo-responsive">
+        <div id="logo-component"></div>
+        <button id="open-menu-btn" class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
       <div class="search-bar">
         <input type="text" placeholder="pesquisa">
         <button><i class="fas fa-search"></i></button>
@@ -19,6 +27,18 @@
           <span><i class="fa-solid fa-cart-shopping"></i>Carrinho</span>
         </a>
       </div>
+    </div>
+    <div id="sidebar-responsive" class="sidebar-responsive">
+      <ul class="list">
+        <button id="close-menu-btn" class="menu-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <li><a href="/index.html">Início</a></li>
+        <li><a href="/store/page/product/offers.html">Ofertas</a></li>
+        <li><a href="/store/page/suport/suport.html">Suporte</a></li>
+        <li><a href="#">Entrar</a></li>
+        <li><a href="#">Registrar</a></li>
+      </ul>
     </div>
   </div>
 
