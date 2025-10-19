@@ -59,8 +59,8 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    position: sticky; /* Efeito de 'grudar' na tela */
-    top: 100px; /* Distância do topo ao grudar */
+    position: sticky;
+    top: 100px;
 }
 .category-btn {
     width: 100%;
@@ -86,10 +86,10 @@
 
 /* --- Acordeão de Perguntas e Respostas --- */
 .faq-category-content {
-    display: none; /* Esconde todas as categorias por padrão */
+    display: none;
 }
 .faq-category-content.active {
-    display: block; /* Mostra apenas a categoria ativa */
+    display: block;
 }
 
 .faq-item {
@@ -124,10 +124,10 @@
     margin: 0;
 }
 .faq-item.active .faq-question i {
-    transform: rotate(45deg); /* Gira o '+' para formar um 'x' */
+    transform: rotate(45deg);
 }
 .faq-item.active .faq-answer {
-    max-height: 300px; /* Altura máxima para a resposta aparecer */
+    max-height: 300px;
     padding-bottom: 20px;
     transition: max-height 0.4s ease-in, padding 0.4s ease-in;
 }
@@ -164,15 +164,15 @@
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     .faq-content {
-        grid-template-columns: 1fr; /* Coluna única em telas pequenas */
+        grid-template-columns: 1fr;
     }
     .faq-categories {
         margin-bottom: 30px;
     }
     .faq-categories ul {
-        position: static; /* Remove o efeito sticky */
+        position: static;
         display: flex;
-        flex-wrap: wrap; /* Permite que os botões quebrem a linha */
+        flex-wrap: wrap;
         gap: 10px;
     }
     .category-btn {

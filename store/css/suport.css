@@ -6,7 +6,7 @@
     background-color: #10B981;
     color: white;
     text-align: center;
-    padding: 80px 20px 100px 20px; /* Padding extra na parte de baixo para o card sobrepor */
+    padding: 80px 20px 100px 20px;
 }
 
 .support-header h1 {
@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     /* Efeito de sobreposição do card no banner */
-    margin-top: -70px; 
+    margin-top: -70px;
     position: relative;
     z-index: 10;
     padding: 0 20px 50px 20px;
@@ -106,6 +106,7 @@
     border: none;
     border-radius: 10px;
 }
+
 #support-form .button-primary:hover {
     background-color: var(--primary-dark);
 }
@@ -120,3 +121,4 @@
         padding: 30px;
     }
 }
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações da Conta - MarketPlus</title>
+    <link rel="icon" href="/img/MarketPlus_Logo/icon.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/account_info.css"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header id="header-component"></header>
+
+    <main class="container">
+        <div class="page-header">
+            <a href="my_profile.html" class="back-link"><i class="bi bi-arrow-left-short"></i> Voltar para Meu Perfil</a>
+            <h1>Informações da Conta</h1>
+        </div>
+
+        <div class="account-form-card">
+            <form id="account-info-form">
+                <h2>Dados Pessoais</h2>
+                <div class="form-field">
+                    <label for="account-name">Nome Completo</label>
+                    <input type="text" id="account-name" name="name" value="Nome Cliente" required>
+                </div>
+                <div class="form-field">
+                    <label for="account-email">E-mail</label>
+                    <input type="email" id="account-email" name="email" value="emailcliente@gmail.com" required>
+                </div>
+                <div class="form-field">
+                    <label for="account-phone">Telefone</label>
+                    <input type="tel" id="account-phone" name="phone" value="(41) 99999-9999">
+                </div>
+                
+                <hr class="divider">
+
+                <h2>Alterar Senha</h2>
+                <div class="form-field">
+                    <label for="current-password">Senha Atual</label>
+                    <input type="password" id="current-password" name="currentPassword" placeholder="Digite sua senha atual">
+                </div>
+                 <div class="form-field">
+                    <label for="new-password">Nova Senha</label>
+                    <input type="password" id="new-password" name="newPassword" placeholder="Mínimo 6 caracteres">
+                </div>
+                 <div class="form-field">
+                    <label for="confirm-password">Confirmar Nova Senha</label>
+                    <input type="password" id="confirm-password" name="confirmPassword" placeholder="Repita a nova senha">
+                </div>
+
+                <button type="submit" class="button-primary">Salvar Alterações</button>
+            </form>
+        </div>
+    </main>
+
+    <footer id="footer-component"></footer>
+    
+    <script src="../../js/global.js"></script>
+    <script src="../../js/controller.js"></script>
+</body>
+</html>

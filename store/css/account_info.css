@@ -1,0 +1,91 @@
+@import url("./global.css");
+
+.page-header {
+    margin: 40px 0;
+}
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary-light);
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.back-link i {
+    font-size: 1.5rem;
+}
+.page-header h1 {
+    font-size: 2.2rem;
+    color: var(--text-primary);
+}
+
+.account-form-card {
+    background-color: var(--bg-medium);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--bg-light);
+    max-width: 700px;
+    margin: 0 auto 80px;
+}
+
+.account-form-card h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+}
+
+#account-info-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.form-field input {
+    padding: 12px 15px;
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--bg-light);
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.form-field input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(42, 109, 245, 0.25);
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid var(--bg-light);
+    margin: 20px 0;
+}
+
+#account-info-form .button-primary {
+    margin-top: 20px;
+    align-self: flex-start;
+    width: auto;
+}
+.button-primary {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}

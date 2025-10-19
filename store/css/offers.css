@@ -111,7 +111,7 @@
 
 /* --- ÁREA DE PRODUTOS (DIREITA) - CORREÇÃO APLICADA AQUI --- */
 .products-area {
-    display: grid; /* Faz os filhos (sorting, grid e paginação) se alinharem em um grid de uma coluna */
+    display: grid;
     gap: 20px;
 }
 

@@ -1,99 +1,93 @@
 @import url("./global.css");
 
 /* --- Cabeçalho da Página --- */
-.payment-methods-header {
+.about-header {
     text-align: center;
-    margin: 50px 0;
+    margin: 60px 0;
 }
-.payment-methods-header h1 {
+.about-header h1 {
     font-size: 2.8rem;
     color: var(--text-primary);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
-.payment-methods-header p {
+.about-header .subtitle {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
-/* --- Grid dos Cards --- */
-.methods-grid {
+/* --- Seção "Por que nos escolher?" --- */
+.why-choose-us {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
-
-/* --- Estilo do Card Individual --- */
-.method-card {
+.feature-card {
     background-color: var(--bg-medium);
-    border: 1px solid var(--bg-light);
-    border-radius: 12px;
     padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--bg-light);
     text-align: center;
     transition: all 0.3s ease;
 }
-.method-card:hover {
+.feature-card:hover {
     transform: translateY(-5px);
     border-color: var(--primary);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
-
-.method-card i {
-    font-size: 3rem;
+.feature-card i {
+    font-size: 2.5rem;
     color: var(--primary);
     margin-bottom: 20px;
 }
-.method-card h2 {
-    font-size: 1.5rem;
+.feature-card h3 {
+    font-size: 1.3rem;
     color: var(--text-primary);
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
 }
-.method-card p {
+.feature-card p {
     color: var(--text-secondary);
     line-height: 1.6;
-    min-height: 5em;
 }
 
-/* Bandeiras dos cartões */
-.card-flags {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    align-items: center;
+/* --- Seção "Nossa História" --- */
+.our-story {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
 }
-.card-flags img {
-    height: 30px;
-    filter: grayscale(100%) contrast(50%);
+.our-story h2 {
+    font-size: 2.2rem;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+.our-story p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
 }
 
-/* --- Seção de Segurança --- */
-.security-info, .more-help {
+/* --- Seção Final de Call to Action --- */
+.final-cta {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 80px auto;
+    margin: 80px 0;
     padding: 40px;
     background-color: var(--bg-medium);
     border-radius: 8px;
-    max-width: 800px;
 }
-.security-info i {
-    font-size: 2.5rem;
-    color: var(--success);
-    margin-bottom: 15px;
-}
-.security-info h2, .more-help h2 {
+.final-cta h2 {
     font-size: 1.8rem;
     color: var(--text-primary);
     margin-bottom: 10px;
 }
-.security-info p, .more-help p {
-    color: var(--text-secondary);
-    line-height: 1.7;
+.final-cta .button-primary {
+    margin-top: 20px;
 }
 .button-primary {
     margin-top: 15px;
@@ -107,9 +101,13 @@
     transition: background-color 0.2s ease;
     text-decoration: none;
 }
+
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
-    .payment-methods-header h1 {
+    .about-header h1 {
         font-size: 2.2rem;
+    }
+    .our-story h2 {
+        font-size: 1.8rem;
     }
 }
