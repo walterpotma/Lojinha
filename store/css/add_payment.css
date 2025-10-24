@@ -1,0 +1,488 @@
+@import url("./global.css");
+
+.page-header {
+    margin: 40px 0;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary-light);
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--primary);
+}
+
+.back-link i {
+    font-size: 1.5rem;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Cards de métodos salvos */
+.payment-methods-container {
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.saved-methods-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment-methods-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-method-card {
+    background: var(--bg-medium);
+    border: 1px solid var(--bg-light);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.payment-method-card:hover {
+    border-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method-card.default::before {
+    content: "Padrão";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: var(--accent);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.method-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.method-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.method-details h3 {
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.method-details p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.method-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-icon {
+    background: transparent;
+    border: 1px solid var(--bg-light);
+    color: var(--text-secondary);
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+    background: var(--bg-light);
+    color: var(--text-primary);
+    border-color: var(--primary-light);
+}
+
+.btn-icon.delete:hover {
+    background: var(--error);
+    border-color: var(--error);
+    color: white;
+}
+
+/* Card de adicionar novo método */
+.add-method-section {
+    background: var(--bg-medium);
+    border: 2px dashed var(--bg-light);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.add-method-section:hover {
+    border-color: var(--primary);
+    background: var(--card-bg);
+}
+
+.add-method-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.add-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.add-method-content h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.add-method-content p {
+    color: var(--text-secondary);
+    max-width: 400px;
+}
+
+/* Modal de adicionar método */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.payment-modal {
+    background: var(--bg-medium);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    padding: 25px 30px 0;
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+}
+
+.close-modal {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: 0 30px 30px;
+}
+
+.payment-type-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.payment-type {
+    background: var(--card-bg);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.payment-type:hover {
+    border-color: var(--primary-light);
+}
+
+.payment-type.selected {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+.payment-type-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.payment-type.selected .payment-type-icon {
+    color: white;
+}
+
+.payment-type span {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.payment-type.selected span {
+    color: white;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.button-primary, .button-secondary {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.button-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.button-secondary {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--bg-light);
+}
+
+.button-secondary:hover {
+    background: var(--bg-light);
+    color: var(--text-primary);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-secondary);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+/* ... código anterior mantido ... */
+
+/* Estilos dos inputs do formulário */
+.payment-form .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.payment-form label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.payment-form input {
+    padding: 12px 15px;
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--bg-light);
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.payment-form input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(42, 109, 245, 0.25);
+}
+
+.payment-form input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Checkboxes */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+/* Estados de erro (opcional) */
+.payment-form input.error {
+    border-color: var(--error);
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25);
+}
+
+.error-message {
+    color: var(--error);
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Animações */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .payment-modal {
+        margin: 20px;
+        max-height: 80vh;
+    }
+    
+    .modal-body {
+        padding: 0 20px 20px;
+    }
+    
+    .modal-header {
+        padding: 20px 20px 0;
+    }
+    
+    .payment-type-selector {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+}

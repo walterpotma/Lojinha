@@ -1,0 +1,572 @@
+@import url("./global.css");
+
+.page-header {
+    margin: 40px 0;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary-light);
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--primary);
+}
+
+.back-link i {
+    font-size: 1.5rem;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Filtros e busca */
+.purchases-filters {
+    background: var(--bg-medium);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--bg-light);
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.search-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(42, 109, 245, 0.25);
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.filter-select {
+    padding: 12px 15px;
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--bg-light);
+    outline: none;
+    font-size: 1rem;
+    min-width: 180px;
+    cursor: pointer;
+}
+
+.filter-select:focus {
+    border-color: var(--primary);
+}
+
+/* Container de compras */
+.purchases-container {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.purchases-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card de compra */
+.purchase-card {
+    background: var(--bg-medium);
+    border: 1px solid var(--bg-light);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.purchase-card:hover {
+    border-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-header {
+    padding: 20px 25px;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--bg-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.purchase-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.purchase-id {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.purchase-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.purchase-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.pending {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--warning);
+    border: 1px solid var(--warning);
+}
+
+.status-badge.processing {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--info);
+    border: 1px solid var(--info);
+}
+
+.status-badge.shipped {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--success);
+    border: 1px solid var(--success);
+}
+
+.status-badge.delivered {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.status-badge.cancelled {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--error);
+    border: 1px solid var(--error);
+}
+
+/* Itens da compra */
+.purchase-items {
+    padding: 25px;
+}
+
+.purchase-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.purchase-item:last-child {
+    border-bottom: none;
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.item-image img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.item-name {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.item-category {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.item-price {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.item-quantity {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Footer da compra */
+.purchase-footer {
+    padding: 20px 25px;
+    background: var(--card-bg);
+    border-top: 1px solid var(--bg-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.purchase-total {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.total-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.total-value {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.purchase-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--bg-light);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-light);
+    color: var(--text-primary);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Tracking de entrega */
+.delivery-tracking {
+    padding: 20px 25px;
+    background: var(--card-bg);
+    border-top: 1px solid var(--bg-light);
+}
+
+.tracking-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tracking-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 40px;
+}
+
+.tracking-steps::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--bg-light);
+    z-index: 1;
+}
+
+.tracking-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.step-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+}
+
+.step-icon.active {
+    background: var(--primary);
+    color: white;
+}
+
+.step-icon.completed {
+    background: var(--accent);
+    color: white;
+}
+
+.step-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 80px;
+}
+
+.step-date {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* Estados vazios */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+}
+
+.empty-state i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+.empty-state h3 {
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.empty-state p {
+    margin-bottom: 25px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Modal de detalhes */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.purchase-modal {
+    background: var(--bg-medium);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    padding: 25px 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+}
+
+.close-modal {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: 0 30px 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .purchases-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        min-width: auto;
+    }
+    
+    .purchase-header,
+    .purchase-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .purchase-status {
+        align-self: flex-start;
+    }
+    
+    .purchase-actions {
+        width: 100%;
+        justify-content: stretch;
+    }
+    
+    .purchase-actions .btn {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .tracking-steps {
+        margin: 0 20px;
+    }
+    
+    .step-label {
+        font-size: 0.7rem;
+        max-width: 60px;
+    }
+    
+    .purchase-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .item-image {
+        align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tracking-steps {
+        flex-direction: column;
+        gap: 20px;
+        margin: 0;
+    }
+    
+    .tracking-steps::before {
+        display: none;
+    }
+    
+    .tracking-step {
+        flex-direction: row;
+        gap: 15px;
+        align-self: flex-start;
+    }
+    
+    .step-label {
+        text-align: left;
+        max-width: none;
+    }
+}

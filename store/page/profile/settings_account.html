@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - MarketPlus</title>
+    <link rel="icon" href="/img/MarketPlus_Logo/icon.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/settings_account.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header id="header-component"></header>
+
+    <main class="container">
+        <div class="page-header">
+            <a href="my_profile.html" class="back-link">
+                <i class="bi bi-arrow-left-short"></i> Voltar para Meu Perfil
+            </a>
+            <h1>Configurações</h1>
+        </div>
+
+        <div class="settings-container">
+            <!-- Notificações -->
+            <div class="settings-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <h2 class="section-title">Notificações</h2>
+                </div>
+                
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Notificações por Email</div>
+                            <div class="setting-description">Receba atualizações sobre seus pedidos e promoções</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Notificações de Promoções</div>
+                            <div class="setting-description">Alertas sobre ofertas e descontos especiais</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Notificações de Estoque</div>
+                            <div class="setting-description">Avise-me quando produtos voltarem ao estoque</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacidade -->
+            <div class="settings-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+                    <h2 class="section-title">Privacidade</h2>
+                </div>
+                
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Perfil Público</div>
+                            <div class="setting-description">Permitir que outros usuários vejam seu perfil</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Compartilhar Dados</div>
+                            <div class="setting-description">Permitir uso de dados para personalização</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conta -->
+            <div class="settings-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="bi bi-person-gear"></i>
+                    </div>
+                    <h2 class="section-title">Conta</h2>
+                </div>
+                
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Exportar Dados</div>
+                            <div class="setting-description">Baixe uma cópia dos seus dados pessoais</div>
+                        </div>
+                        <button class="btn-logout">
+                            <i class="bi bi-download"></i> Exportar
+                        </button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Sair da Conta</div>
+                            <div class="setting-description">Desconectar de todos os dispositivos</div>
+                        </div>
+                        <button class="btn-logout" onclick="openLogoutModal()">
+                            <i class="bi bi-box-arrow-right"></i> Sair
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zona Perigosa -->
+            <div class="settings-section" style="border-color: var(--error);">
+                <div class="section-header">
+                    <div class="section-icon" style="background: var(--error);">
+                        <i class="bi bi-exclamation-triangle"></i>
+                    </div>
+                    <h2 class="section-title">Zona Perigosa</h2>
+                </div>
+                
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Excluir Conta</div>
+                            <div class="setting-description">Exclua permanentemente sua conta e todos os dados</div>
+                        </div>
+                        <button class="btn-danger" onclick="openDeleteModal()">
+                            <i class="bi bi-trash"></i> Excluir Conta
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Sair -->
+    <div class="modal-overlay" id="logout-modal">
+        <div class="confirm-modal">
+            <div class="modal-icon warning">
+                <i class="bi bi-box-arrow-right"></i>
+            </div>
+            <h3>Sair da Conta?</h3>
+            <p>Você será desconectado de todos os dispositivos. Para acessar novamente, precisará fazer login.</p>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModals()">Cancelar</button>
+                <button class="btn-confirm" onclick="logout()" style="background: var(--warning);">Sair</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Excluir Conta -->
+    <div class="modal-overlay" id="delete-modal">
+        <div class="confirm-modal">
+            <div class="modal-icon">
+                <i class="bi bi-exclamation-triangle"></i>
+            </div>
+            <h3>Excluir Conta Permanentemente?</h3>
+            <p>Esta ação não pode ser desfeita. Todos os seus dados, pedidos e histórico serão permanentemente excluídos.</p>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModals()">Cancelar</button>
+                <button class="btn-confirm" onclick="deleteAccount()">Excluir Conta</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer-component"></footer>
+    
+    <script src="../../js/global.js"></script>
+    <script src="../../js/settings_account.js"></script>
+    <script src="../../js/controller.js"></script>
+</body>
+</html>

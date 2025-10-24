@@ -3,6 +3,7 @@
 .page-header {
     margin: 40px 0;
 }
+
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -10,10 +11,17 @@
     color: var(--primary-light);
     text-decoration: none;
     margin-bottom: 20px;
+    transition: color 0.2s ease;
 }
+
+.back-link:hover {
+    color: var(--primary);
+}
+
 .back-link i {
     font-size: 1.5rem;
 }
+
 .page-header h1 {
     font-size: 2.2rem;
     color: var(--text-primary);
@@ -26,12 +34,43 @@
     border: 1px solid var(--bg-light);
     max-width: 700px;
     margin: 0 auto 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .account-form-card h2 {
     font-size: 1.5rem;
     color: var(--text-primary);
     margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-toggle {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.edit-toggle:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.edit-toggle.cancel {
+    background: var(--error);
+}
+
+.edit-toggle.cancel:hover {
+    background: #dc2626;
 }
 
 #account-info-form {
@@ -51,7 +90,20 @@
     margin-bottom: 8px;
 }
 
-.form-field input {
+/* Campo em modo visualização */
+.info-display {
+    padding: 12px 15px;
+    border-radius: 6px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border: 1px solid transparent;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+}
+
+/* Campo em modo edição */
+.info-edit {
     padding: 12px 15px;
     border-radius: 6px;
     background-color: var(--input-bg);
@@ -60,11 +112,21 @@
     outline: none;
     font-size: 1rem;
     transition: all 0.2s ease;
+    display: none;
 }
 
-.form-field input:focus {
+.info-edit:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(42, 109, 245, 0.25);
+}
+
+/* Quando está editando */
+.editing .info-display {
+    display: none;
+}
+
+.editing .info-edit {
+    display: block;
 }
 
 .divider {
@@ -73,11 +135,12 @@
     margin: 20px 0;
 }
 
-#account-info-form .button-primary {
+.form-actions {
+    display: flex;
+    gap: 15px;
     margin-top: 20px;
-    align-self: flex-start;
-    width: auto;
 }
+
 .button-primary {
     background-color: var(--primary);
     color: #fff;
@@ -87,5 +150,33 @@
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.button-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.button-secondary {
+    background-color: transparent;
+    color: var(--text-secondary);
+    padding: 12px 25px;
+    border: 1px solid var(--bg-light);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button-secondary:hover {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+/* Estado de senha */
+.password-field .info-display {
+    color: var(--text-muted);
+    font-style: italic;
 }
