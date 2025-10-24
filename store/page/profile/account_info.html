@@ -9,7 +9,8 @@
     
     <link rel="stylesheet" href="../../css/global.css">
     <link rel="stylesheet" href="../../css/components.css">
-    <link rel="stylesheet" href="../../css/account_info.css"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/account_info.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -17,50 +18,83 @@
 
     <main class="container">
         <div class="page-header">
-            <a href="my_profile.html" class="back-link"><i class="bi bi-arrow-left-short"></i> Voltar para Meu Perfil</a>
+            <a href="my_profile.html" class="back-link">
+                <i class="bi bi-arrow-left-short"></i> Voltar para Meu Perfil
+            </a>
             <h1>Informações da Conta</h1>
         </div>
 
         <div class="account-form-card">
             <form id="account-info-form">
-                <h2>Dados Pessoais</h2>
+                <h2>
+                    Dados Pessoais
+                    <button type="button" class="edit-toggle" id="edit-personal-btn">
+                        <i class="bi bi-pencil"></i> Alterar
+                    </button>
+                </h2>
+                
                 <div class="form-field">
                     <label for="account-name">Nome Completo</label>
-                    <input type="text" id="account-name" name="name" value="Nome Cliente" required>
+                    <div class="info-display" id="name-display">Nome Cliente</div>
+                    <input type="text" class="info-edit" id="account-name" name="name" value="Nome Cliente" required>
                 </div>
+                
                 <div class="form-field">
                     <label for="account-email">E-mail</label>
-                    <input type="email" id="account-email" name="email" value="emailcliente@gmail.com" required>
+                    <div class="info-display" id="email-display">emailcliente@gmail.com</div>
+                    <input type="email" class="info-edit" id="account-email" name="email" value="emailcliente@gmail.com" required>
                 </div>
+                
                 <div class="form-field">
                     <label for="account-phone">Telefone</label>
-                    <input type="tel" id="account-phone" name="phone" value="(41) 99999-9999">
+                    <div class="info-display" id="phone-display">(41) 99999-9999</div>
+                    <input type="tel" class="info-edit" id="account-phone" name="phone" value="(41) 99999-9999">
                 </div>
                 
                 <hr class="divider">
 
-                <h2>Alterar Senha</h2>
-                <div class="form-field">
-                    <label for="current-password">Senha Atual</label>
-                    <input type="password" id="current-password" name="currentPassword" placeholder="Digite sua senha atual">
+                <h2>
+                    Segurança
+                    <button type="button" class="edit-toggle" id="edit-password-btn">
+                        <i class="bi bi-key"></i> Alterar Senha
+                    </button>
+                </h2>
+                
+                <div class="form-field password-field">
+                    <label for="current-password">Senha</label>
+                    <div class="info-display">••••••••</div>
+                    <input type="password" class="info-edit" id="current-password" name="currentPassword" placeholder="Digite sua senha atual">
                 </div>
-                 <div class="form-field">
+                
+                <div class="form-field password-field">
                     <label for="new-password">Nova Senha</label>
-                    <input type="password" id="new-password" name="newPassword" placeholder="Mínimo 6 caracteres">
+                    <div class="info-display">••••••••</div>
+                    <input type="password" class="info-edit" id="new-password" name="newPassword" placeholder="Mínimo 6 caracteres">
                 </div>
-                 <div class="form-field">
-                    <label for="confirm-password">Confirmar Nova Senha</label>
-                    <input type="password" id="confirm-password" name="confirmPassword" placeholder="Repita a nova senha">
+                
+                <div class="form-field password-field">
+                    <label for="confirm-password">Confirmar Senha</label>
+                    <div class="info-display">••••••••</div>
+                    <input type="password" class="info-edit" id="confirm-password" name="confirmPassword" placeholder="Repita a nova senha">
                 </div>
 
-                <button type="submit" class="button-primary">Salvar Alterações</button>
+                <div class="form-actions" id="form-actions" style="display: none;">
+                    <button type="submit" class="button-primary">
+                        <i class="bi bi-check-lg"></i> Salvar Alterações
+                    </button>
+                    <button type="button" class="button-secondary" id="cancel-edit">
+                        <i class="bi bi-x-lg"></i> Cancelar
+                    </button>
+                </div>
             </form>
         </div>
     </main>
-
-    <footer id="footer-component"></footer>
+    <footer>
+        <div id="footer-component"></div>
+    </footer>
     
     <script src="../../js/global.js"></script>
+    <script src="../../js/info_account.js"></script>
     <script src="../../js/controller.js"></script>
 </body>
 </html>

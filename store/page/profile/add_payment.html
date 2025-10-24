@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Pagamento - MarketPlus</title>
+    <link rel="icon" href="/img/MarketPlus_Logo/icon.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/add_payment.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header id="header-component"></header>
+
+    <main class="container">
+        <div class="page-header">
+            <a href="my_profile.html" class="back-link">
+                <i class="bi bi-arrow-left-short"></i> Voltar para Meu Perfil
+            </a>
+            <h1>Métodos de Pagamento</h1>
+            <p class="page-subtitle">Gerencie suas formas de pagamento salvas</p>
+        </div>
+
+        <div class="payment-methods-container">
+            <!-- Métodos Salvos -->
+            <div class="saved-methods-section">
+                <h2 class="section-title">
+                    <i class="bi bi-credit-card"></i>
+                    Seus Cartões Salvos
+                </h2>
+                
+                <div class="payment-methods-list" id="saved-methods-list">
+                    <!-- Cartão 1 (Padrão) -->
+                    <div class="payment-method-card default">
+                        <div class="method-info">
+                            <div class="method-icon">
+                                <i class="bi bi-credit-card-2-front"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Cartão Mastercard</h3>
+                                <p>**** **** **** 1234 • Expira em 12/2025</p>
+                            </div>
+                        </div>
+                        <div class="method-actions">
+                            <button class="btn-icon" title="Definir como padrão" disabled>
+                                <i class="bi bi-star-fill"></i>
+                            </button>
+                            <button class="btn-icon delete" title="Remover cartão">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cartão 2 -->
+                    <div class="payment-method-card">
+                        <div class="method-info">
+                            <div class="method-icon">
+                                <i class="bi bi-credit-card-2-front"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Cartão Visa</h3>
+                                <p>**** **** **** 5678 • Expira em 08/2026</p>
+                            </div>
+                        </div>
+                        <div class="method-actions">
+                            <button class="btn-icon" title="Definir como padrão">
+                                <i class="bi bi-star"></i>
+                            </button>
+                            <button class="btn-icon delete" title="Remover cartão">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adicionar Novo Método -->
+            <div class="add-method-section" id="add-method-trigger">
+                <div class="add-method-content">
+                    <div class="add-icon">
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+                    <h3>Adicionar Método de Pagamento</h3>
+                    <p>Clique aqui para adicionar um novo cartão ou outro método de pagamento</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal para Adicionar Método -->
+    <div class="modal-overlay" id="add-method-modal">
+        <div class="payment-modal">
+            <div class="modal-header">
+                <h2>Adicionar Método de Pagamento</h2>
+                <button class="close-modal" id="close-modal">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Seletor de Tipo -->
+                <div class="payment-type-selector">
+                    <div class="payment-type selected" data-type="credit">
+                        <div class="payment-type-icon">
+                            <i class="bi bi-credit-card-2-front"></i>
+                        </div>
+                        <span>Cartão de Crédito</span>
+                    </div>
+                    <div class="payment-type" data-type="debit">
+                        <div class="payment-type-icon">
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <span>Cartão de Débito</span>
+                    </div>
+                </div>
+
+                <!-- Formulário do Cartão -->
+                <form class="payment-form" id="payment-form">
+                    <div class="form-field">
+                        <label for="card-number">Número do Cartão</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="card-name">Nome no Cartão</label>
+                        <input type="text" id="card-name" placeholder="Como está no cartão" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="card-expiry">Validade</label>
+                            <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="card-cvv">CVV</label>
+                            <input type="text" id="card-cvv" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="save-card" checked>
+                            <span>Salvar este cartão para compras futuras</span>
+                        </label>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="default-card">
+                            <span>Definir como método de pagamento padrão</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="button-secondary" id="cancel-add">
+                            <i class="bi bi-x-lg"></i> Cancelar
+                        </button>
+                        <button type="submit" class="button-primary">
+                            <i class="bi bi-check-lg"></i> Salvar Cartão
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer-component"></footer>
+    
+    <script src="../../js/global.js"></script>
+    <script src="../../js/add_payment.js"></script>
+    <script src="../../js/controller.js"></script>
+</body>
+</html>

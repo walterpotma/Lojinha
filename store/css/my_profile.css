@@ -3,26 +3,27 @@
 
 /* --- LAYOUT GERAL --- */
 .main_box {
-    margin-top: 60px; /* Reduzi um pouco a margem */
+    margin-top: 60px;
     margin-bottom: 100px;
 }
 
 .main_box_2 {
     width: 85%;
-    max-width: 1200px; /* Adicionei um max-width */
+    max-width: 1200px;
     margin: auto;
 }
 
-/* --- SEÇÃO DE DADOS DO CLIENTE (MUDANÇA PRINCIPAL) --- */
+/* --- SEÇÃO DE DADOS DO CLIENTE --- */
 .customer_data {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* MODIFICADO */
-    text-align: left;       /* MODIFICADO */
+    align-items: flex-start;
+    text-align: left;
     margin-bottom: 60px;
 }
+
 .customer_data h3 {
-    font-size: 28px; /* Nome maior e mais destacado */
+    font-size: 28px;
     font-weight: 600;
     color: var(--text-primary);
     margin-top: 20px;
@@ -31,7 +32,7 @@
 
 .customer_data p {
     font-size: 16px;
-    color: var(--text-secondary); /* Cor secundária para o email */
+    color: var(--text-secondary);
 }
 
 /* --- FOTO DE PERFIL E EFEITO DE EDIÇÃO --- */
@@ -47,7 +48,7 @@
     border-radius: 50%;
     display: block;
     object-fit: cover;
-    border: 3px solid var(--primary); /* Borda colorida na foto */
+    border: 3px solid var(--primary);
 }
 
 .overlay {
@@ -60,7 +61,7 @@
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     display: flex;
-    flex-direction: column; /* Para alinhar ícone e texto */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -69,6 +70,7 @@
     cursor: pointer;
     font-size: 14px;
 }
+
 .overlay i {
     font-size: 24px;
     margin-bottom: 5px;
@@ -78,67 +80,108 @@
     opacity: 1;
 }
 
-
-/* --- GRID DE CARDS DE NAVEGAÇÃO (MUDANÇA PRINCIPAL) --- */
+/* --- GRID DE CARDS DE NAVEGAÇÃO (CORREÇÃO PRINCIPAL) --- */
 .boxs {
     margin-top: 40px;
     display: grid;
-    /* Deixei o minmax um pouco maior para mais respiro */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
 }
 
+/* NOVO: Estilo para os links dos cards */
+.box-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%; /* Garante que o link ocupe toda a altura */
+}
+
+/* CORREÇÃO: Box com altura fixa e alinhamento consistente */
 .box {
-    background-color: var(--bg-medium); /* Fundo um pouco mais escuro */
+    background-color: var(--bg-medium);
     border-radius: 8px;
     border: 1px solid var(--bg-light);
     padding: 25px;
     display: flex;
     flex-direction: column;
-    gap: 8px; /* Ajustei o espaçamento interno */
-    transition: all 0.3s ease; /* Transição mais rápida */
-    cursor: pointer; /* Adiciona o cursor de link */
+    gap: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 180px; /* ALTURA FIXA PARA TODOS OS CARDS */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
 }
 
-/* NOVO: Ícones maiores e com cor de destaque */
+/* Ícones */
 .box i {
     font-size: 32px;
     color: var(--primary);
     margin-bottom: 10px;
 }
 
-/* NOVO: Estilo para o título do card (h4) */
+/* Título do card */
 .box h4 {
     font-size: 18px;
     font-weight: 600;
     color: var(--text-primary);
-    margin: 0; /* Remove margem padrão do h4 */
+    margin: 0;
+    line-height: 1.3;
 }
 
-/* NOVO: Estilo para a descrição do card (p) */
+/* Descrição do card - CORREÇÃO PARA TEXTOS LONGOS */
 .box p {
     font-size: 14px;
     color: var(--text-secondary);
-    line-height: 1.5; /* Melhora a legibilidade */
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* LIMITA A 3 LINHAS */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.box:hover {
+/* Efeitos hover */
+.box-link:hover .box {
     transform: translateY(-5px);
     border-color: var(--primary);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
-/* AJUSTES FINOS OPCIONAIS PARA TELAS PEQUENAS */
+
+/* Remove qualquer estilo de link padrão */
+.box-link:focus,
+.box-link:active {
+    outline: none;
+    text-decoration: none;
+}
+
+/* AJUSTES PARA TELAS PEQUENAS */
+@media (max-width: 768px) {
+    .boxs {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .box {
+        height: 160px; /* Altura um pouco menor no mobile */
+        padding: 20px;
+    }
+}
+
 @media (max-width: 480px) {
     .customer_data h3 {
-        font-size: 24px; /* Diminui um pouco o nome do cliente */
+        font-size: 24px;
     }
 
+    .boxs {
+        grid-template-columns: 1fr; /* Uma coluna no mobile muito pequeno */
+    }
+    
     .box {
-        padding: 20px; /* Diminui o espaçamento interno dos cards */
-        text-align: center; /* Centraliza o conteúdo do card no celular */
+        text-align: center;
+        height: 150px;
     }
 
     .box i {
-        margin: 0 auto 10px; /* Centraliza o ícone horizontalmente */
+        margin: 0 auto 10px;
     }
 }
